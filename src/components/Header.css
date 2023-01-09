@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap');
+
+
+
+Navbar  {
+    text-align: center;
+}
+body {
+font-family: "Roboto Mono";
+scroll-behavior: auto;
+}
+.home {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+}
+.buttons-nav {
+    position: absolute;
+    right: 10vw;
+    border:black solid;
+    border-width: 1px;
+    border-radius: 4px;
+}
+.buttons-nav:hover {
+    background-color: rgba(0, 0, 0, 0.198);
+}
+.access {
+    font-family: sans-serif;
+    padding: 10px;
+    color: black;
+
+}a {
+    text-decoration: none;
+    color: black;
+}
+.hello {
+    background: black;
+    color: aliceblue;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.navtext {
+    padding-bottom: 0.5rem;
+    position: relative;
+    margin: 30px;
+}
+
+.navtext::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transform: scale(0,1);
+    height: 2px;
+    background-color: darkblue;
+    transition: transform 0.3s ease;
+}
+.navtext:hover::after {
+    transform: scale(1,1);
+}
+.logocollege {
+    display: inline-block;
+    position: absolute;
+    right:5vw;
+    
+    
+}
+.logos {
+    height: 50px;
+    width: auto;
+}
