@@ -11,9 +11,13 @@ const Header = () => {
             <div class="home hello">
               <p id="hello">idealab MEC</p>
             </div>
-            <div class="home"><a href="" class="navtext">Home</a> <a href="" class="navtext nav-link">Facilities</a> <a
-                href="" class="navtext nav-link">Events</a> <a href="" class="navtext nav-link">Team</a> <a href=""
-                class="navtext nav-link">Contact</a></div>
+            <div class="home">
+              <Link to ="/" class="navtext">Home</Link>
+              <Link to="" class="navtext nav-link">Facilities</Link> 
+              <Link to="" class="navtext nav-link">Events</Link>
+              <Link to="" class="navtext nav-link">Team</Link>
+              <Link to=""class="navtext nav-link">Contact</Link>
+            </div>
         <div class="buttons-nav home"> 
           <Link to='/request' className='access'>Request Access</Link>
         </div>
