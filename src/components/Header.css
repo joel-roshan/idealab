@@ -20,6 +20,7 @@ scroll-behavior: auto;
     border:black solid;
     border-width: 1px;
     border-radius: 4px;
+    margin-top: 1rem;
 }
 .buttons-nav:hover {
     background-color: rgba(0, 0, 0, 0.198);
@@ -70,4 +71,5 @@ scroll-behavior: auto;
 .logos {
     height: 50px;
     width: auto;
+    margin-top: 0.8rem;
 }

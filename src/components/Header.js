@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Header.css"
-import "./asset/logo.png"
+import logo from "../asset/logo.png"
 
 const Header = () => {
   return (
@@ -14,8 +14,12 @@ const Header = () => {
                 href="" class="navtext nav-link">Events</a> <a href="" class="navtext nav-link">Team</a> <a href=""
                 class="navtext nav-link">Contact</a></div>
         <div class="buttons-nav home"> <a href="" class="access">Request Access</a></div>
-        <div class="logocollege"><a href="https://www.mec.ac.in" target="_blank"><img src="logo.png" alt="MEC Logo"
-                    class="logos"></img></a></div>
+        <div class="logocollege">
+            <a href="https://www.mec.ac.in" target="_blank">
+                <img src={logo} alt="MEC Logo" class="logos" />
+                   
+                        </a>
+                        </div>
     </div>
         </div>
     </div>
