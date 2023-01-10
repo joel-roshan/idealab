@@ -13,10 +13,10 @@ const Header = () => {
             </div>
             <div class="home">
               <Link to ="/" class="navtext">Home</Link>
-              <Link to="" class="navtext nav-link">Facilities</Link> 
-              <Link to="" class="navtext nav-link">Events</Link>
-              <Link to="" class="navtext nav-link">Team</Link>
-              <Link to=""class="navtext nav-link">Contact</Link>
+              <Link to="/facilities" class="navtext nav-link">Facilities</Link> 
+              <Link to="/events" class="navtext nav-link">Events</Link>
+              <Link to="/team" class="navtext nav-link">Team</Link>
+              <Link to="/contact"class="navtext nav-link">Contact</Link>
             </div>
         <div class="buttons-nav home"> 
           <Link to='/request' className='access'>Request Access</Link>
