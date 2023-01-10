@@ -8,22 +8,22 @@ const Header = () => {
     <div>
         <div className="header">
           <div id="Navbar">
-            <div class="home hello">
+            <div className="home hello">
               <p id="hello">idealab MEC</p>
             </div>
-            <div class="home">
-              <Link to ="/" class="navtext">Home</Link>
-              <Link to="/facilities" class="navtext nav-link">Facilities</Link> 
-              <Link to="/events" class="navtext nav-link">Events</Link>
-              <Link to="/team" class="navtext nav-link">Team</Link>
-              <Link to="/contact"class="navtext nav-link">Contact</Link>
+            <div className="home">
+              <Link to ="/" className="navtext">Home</Link>
+              <Link to="/facilities" className="navtext nav-link">Facilities</Link> 
+              <Link to="/events" className="navtext nav-link">Events</Link>
+              <Link to="/team" className="navtext nav-link">Team</Link>
+              <Link to="/contact"className="navtext nav-link">Contact</Link>
             </div>
-        <div class="buttons-nav home"> 
+        <div className="buttons-nav home"> 
           <Link to='/request' className='access'>Request Access</Link>
         </div>
-        <div class="logocollege">
+        <div className="logocollege">
             <a href="https://www.mec.ac.in" target="_blank">
-                <img src={logo} alt="MEC Logo" class="logos" />
+                <img src={logo} alt="MEC Logo" className="logos" />
                    
                         </a>
                         </div>
