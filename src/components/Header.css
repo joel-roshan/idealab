@@ -4,6 +4,7 @@
 
 Navbar  {
     text-align: center;
+    margin: 10px;
 }
 body {
 font-family: "Roboto Mono";
@@ -37,8 +38,9 @@ scroll-behavior: auto;
 .hello {
     background: black;
     color: aliceblue;
-    border-radius: 2px;
+    border-radius: 4px;
     padding: 5px;
+    margin: 10px;
 }
 
 .navtext {

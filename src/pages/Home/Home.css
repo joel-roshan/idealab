@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap');
+
+
+
+Navbar  {
+    text-align: center;
+}
+body {
+font-family: "Roboto Mono";
+scroll-behavior: auto;
+}
+.home {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+}
+.buttons-nav {
+    position: absolute;
+    right: 10vw;
+    border:black solid;
+    border-width: 1px;
+    border-radius: 4px;
+}
+.buttons-nav:hover {
+    background-color: rgba(0, 0, 0, 0.198);
+}
+.access {
+    font-family: sans-serif;
+    padding: 10px;
+    color: black;
+
+}
+.car{
+    display: block;
+    height: 85vh;
+    width: auto;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: 15%;
+}
+.carousel{
+    margin: 30px;
+}
+.announcement{
+    position: absolute;
+    top:30vh;
+    right: 5vw;
+    height: 50vh;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    z-index: 9;
+    background-color: #ffff;
+    width: 400px;
+    border-radius: 10px;
+    padding: 20px;
+    border-right: solid black ;
+    border-width: 5px;
+    
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.hello {
+    background: black;
+    color: aliceblue;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.navtext {
+    padding-bottom: 0.5rem;
+    position: relative;
+    margin: 30px;
+}
+
+.navtext::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transform: scale(0,1);
+    height: 2px;
+    background-color: darkblue;
+    transition: transform 0.3s ease;
+}
+.navtext:hover::after {
+    transform: scale(1,1);
+}
+.head-announce{
+    font-family: sans-serif;
+    transform: translateZ(10px)
+}
+.announce {
+    
+    width: 150px;
+    border-radius: 2px;
+    padding: 10px;
+    transition: background 0.23s ease-in;
+
+}
+.announce:hover {
+    background: rgb(0, 255, 0);
+}
+.carouselrule {
+    height: 4px;
+    width:80vw;
+    background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+    border: none;
+    background-size: 200% auto;
+    animation: gradientmove 30s infinite linear;
+}
+@keyframes gradientmove {
+    to {
+        background-position: -200% center;
+      }
+}
+.logocollege {
+    display: inline-block;
+    position: absolute;
+    right:5vw;
+    
+    
+}
+.logos {
+    height: 50px;
+    width: auto;
+}
+.about-image-hold{
+    width: auto;
+    height: 30vh;
+    display: flex;
+}
+.about-image{
+    border-radius: 4px;
+}
+.about-content-hold {
+    width:30vw;
+}
+.about-content {
+    width:30vw;
+    color: white;
+}
+.about-txt {
+    color: #ffff;
+    margin-left: 10vw;
+    opacity: 20px;
+}
+.about {
+    
+    height:70vh;
+    margin:20px;
+    background-color: #222222;
+    border-radius: 5px;
+}
+.about-content-image {
+    display: flex;
+    justify-content: space-around;
+}
