@@ -24,11 +24,12 @@ const Header = () => {
           <div className="logocollege">
             <a href="https://www.mec.ac.in" target="_blank">
               <img src={logo} alt="MEC Logo" className="logos" />
-
+            
             </a>
           </div>
         </div>
       </div>
+      
     </div>
   )
 }

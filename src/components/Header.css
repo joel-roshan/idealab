@@ -3,7 +3,7 @@
 
 
 Navbar  {
-    text-align: center;
+    display: flex;
     margin: 10px;
 }
 body {
@@ -11,8 +11,7 @@ font-family: "Roboto Mono";
 scroll-behavior: auto;
 }
 .home {
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
     padding: 10px;
 }
 .buttons-nav {

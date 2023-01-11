@@ -147,14 +147,23 @@ a {
     margin-left: 10vw;
     opacity: 20px;
 }
+.about-txt-hold {
+    padding: 20px;
+}
 .about {
     
     height:70vh;
-    margin:20px;
     background-color: #222222;
     border-radius: 5px;
 }
 .about-content-image {
     display: flex;
     justify-content: space-around;
+}
+::-webkit-scrollbar
+{
+    width: 0;
+}
+#scrollpath {
+    
 }
