@@ -2,26 +2,29 @@
 
 
 
-#Navbar  {
+.header  {
     margin: 5px;
+    display: flex;
+    align-items: center;
 }
 body {
 font-family: "Roboto Mono";
 scroll-behavior: auto;
 }
-.home {
+.hello {
     display: flex;
     padding: 10px;
 }
-.buttons-nav {
-    position: absolute;
-    right: 10vw;
+.btnnav {
+    
     border:black solid;
     border-width: 1px;
     border-radius: 4px;
     margin-top: 1rem;
+    display: flex;
+   
 }
-.buttons-nav:hover {
+.btnnav:hover {
     background-color: rgba(0, 0, 0, 0.198);
 }
 .access {
@@ -39,23 +42,27 @@ scroll-behavior: auto;
     border-radius: 4px;
     padding: 5px;
     margin: 10px;
+    width: 120px;
+    /* border: 5px solid blue; */
+}
+.home{
+    margin-right: 5vw;
 }
 
 .navtext {
     padding-bottom: 0.5rem;
-    position: relative;
     margin: 30px;
+    
 }
 
 .navtext::after {
     content: "";
-    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     transform: scale(0,1);
     height: 2px;
-    background-color: darkblue;
+    /* background-color: darkblue; */
     transition: transform 0.3s ease;
 }
 .navtext:hover::after {
@@ -63,8 +70,7 @@ scroll-behavior: auto;
 }
 .logocollege {
     display: inline-block;
-    position: absolute;
-    right:5vw;
+    
     
     
 }
@@ -72,4 +78,29 @@ scroll-behavior: auto;
     height: 50px;
     width: auto;
     margin-top: 0.8rem;
+}
+.nav2
+{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid blue; */
+    justify-content: space-between;
+    gap: 2vw;
+    padding-right: 1rem;
+    
+}
+.home
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px dotted pink; */
+}
+
+.navbigdiv{
+    
+    /* border: 5px dotted red; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
