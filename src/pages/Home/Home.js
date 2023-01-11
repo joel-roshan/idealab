@@ -1,6 +1,8 @@
 import React from 'react'
 import Header from '../../components/Header'
 import './Home.css'
+import car from "../../asset/car.jpg"
+
 
 const Home = () => {
   return (
@@ -14,7 +16,7 @@ const Home = () => {
           <p class="announce">announcement 3</p>
           <p class="announce">announcement 4</p>
         </div>
-        <div class="image"><img src='' alt="" class="car" /></div>
+        <div class="image"><img src={car} alt="" class="car" /></div>
       </div>
       <hr class="carouselrule" />
       <div class="about" id ="about">
@@ -29,7 +31,7 @@ const Home = () => {
               earum
               inventore nobis dolor cumque!</p>
           </div>
-          <div class="about-image-hold"><img src="car.jpg" alt="about pic" class="about-image" /></div>
+          <div class="about-image-hold"><img src={car} alt="about pic" class="about-image" /></div>
         </div>
       </div>
 
