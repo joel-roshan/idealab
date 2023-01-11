@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../../components/Header'
 import './Home.css'
 import car from "../../asset/car.jpg"
+import EventCard from '../../components/EventCard'
 
 
 const Home = () => {
@@ -9,7 +10,7 @@ const Home = () => {
     <div>
       <Header />
       <div className="carousel">
-            <div class="announcement" data-tilt>
+            <div class="announcement" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
             <h2 className="head-announce">from the lab</h2>
             <p className="announce">announcement 1</p>
             <p className="announce">announcement 2</p>
@@ -35,6 +36,18 @@ const Home = () => {
           <div className="about-image-hold"><img src={car} alt="about pic" className="about-image" /></div>
         </div>
       </div>
+      <div className='event'>
+        <div className='event-head'>
+          <h2>Events</h2>
+        </div>
+        <div className='event-hold-multi' >
+        <div data-tilt data-tilt-glare data-tilt-max-glare="0.8"><EventCard /></div>
+        <div data-tilt data-tilt-glare data-tilt-max-glare="0.8"><EventCard /></div>
+        <div data-tilt data-tilt-glare data-tilt-max-glare="0.8"><EventCard /></div>
+        <div data-tilt data-tilt-glare data-tilt-max-glare="0.8"><EventCard /></div>
+        </div>
+          </div>
+    
     </div>
   )
 }

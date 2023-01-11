@@ -16,6 +16,7 @@ function App() {
     <div>
       <Helmet>
         <script src = "./tilt.js"></script>
+        
       </Helmet>
       <Routes>
         <Route path='/' element={<Home />} />
