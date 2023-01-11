@@ -4,6 +4,12 @@ import './Home.css'
 import car from "../../asset/car.jpg"
 import EventCard from '../../components/EventCard'
 
+export function AddLibrary(urlOfTheLibrary) {
+  const script = document.createElement('script');
+  script.src = urlOfTheLibrary;
+  script.async = true;
+  document.body.appendChild(script);
+}
 
 const Home = () => {
   return (
@@ -48,6 +54,8 @@ const Home = () => {
         <div><EventCard /></div>
         </div>
           </div>
+          {AddLibrary(
+  './tilt.js')}
     
     </div>
   )
