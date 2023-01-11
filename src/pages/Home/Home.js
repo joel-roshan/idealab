@@ -36,15 +36,16 @@ const Home = () => {
           <div className="about-image-hold"><img src={car} alt="about pic" className="about-image" /></div>
         </div>
       </div>
+      <hr className="carouselrule" />
       <div className='event'>
         <div className='event-head'>
           <h2>Events</h2>
         </div>
-        <div className='event-hold-multi' >
-        <div data-tilt data-tilt-glare data-tilt-max-glare="0.8"><EventCard /></div>
-        <div data-tilt data-tilt-glare data-tilt-max-glare="0.8"><EventCard /></div>
-        <div data-tilt data-tilt-glare data-tilt-max-glare="0.8"><EventCard /></div>
-        <div data-tilt data-tilt-glare data-tilt-max-glare="0.8"><EventCard /></div>
+        <div className='event-hold-multi'>
+        <div><EventCard /></div>
+        <div><EventCard /></div>
+        <div><EventCard /></div>
+        <div><EventCard /></div>
         </div>
           </div>
     
