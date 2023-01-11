@@ -2,9 +2,8 @@
 
 
 
-Navbar  {
-    display: flex;
-    margin: 10px;
+#Navbar  {
+    margin: 5px;
 }
 body {
 font-family: "Roboto Mono";

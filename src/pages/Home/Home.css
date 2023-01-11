@@ -52,7 +52,7 @@ scroll-behavior: auto;
     background-color: #ffff;
     width: 400px;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     border-right: solid black ;
     border-width: 5px;
     
@@ -163,7 +163,4 @@ a {
 ::-webkit-scrollbar
 {
     width: 0;
-}
-#scrollpath {
-    
 }
