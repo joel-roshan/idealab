@@ -3,9 +3,14 @@
 
 
 .header  {
-    margin: 5px;
+    margin: 0px 5px 0 5px;
     display: flex;
     align-items: center;
+    position:sticky; top: 0;
+    border: 1px dotted black;
+    background-color: white;
+    position:fixed;
+    width:100vw
 }
 body {
 font-family: "Roboto Mono";
@@ -51,7 +56,7 @@ scroll-behavior: auto;
 
 .navtext {
     padding-bottom: 0.5rem;
-    margin: 30px;
+    margin: 5vw;
     
 }
 
@@ -62,7 +67,7 @@ scroll-behavior: auto;
     width: 100%;
     transform: scale(0,1);
     height: 2px;
-    /* background-color: darkblue; */
+    background-color: darkblue;
     transition: transform 0.3s ease;
 }
 .navtext:hover::after {
@@ -85,8 +90,10 @@ scroll-behavior: auto;
     align-items: center;
     /* border: 1px solid blue; */
     justify-content: space-between;
+    vertical-align: middle;
     gap: 2vw;
     padding-right: 1rem;
+    padding-bottom: 20px
     
 }
 .home
@@ -102,5 +109,8 @@ scroll-behavior: auto;
     /* border: 5px dotted red; */
     display: flex;
     justify-content: space-between;
+    /* align-items: center; */
+    vertical-align: middle;
+    
     width: 100%;
 }

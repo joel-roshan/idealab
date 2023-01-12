@@ -17,11 +17,11 @@ const Home = () => {
       <Header />
       <div className="carousel">
             <div class="announcement" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
-            <h2 className="head-announce">from the lab</h2>
-            <p className="announce">announcement 1</p>
-            <p className="announce">announcement 2</p>
-            <p className="announce">announcement 3</p>
-            <p className="announce">announcement 4</p>
+            <h2 className="head-announce">From the lab</h2>
+            <p className="announce">Announcement 1</p>
+            <p className="announce">Announcement 2</p>
+            <p className="announce">Announcement 3</p>
+            <p className="announce">Announcement 4</p>
           </div>
 
         <div className="image"><img src={car} alt="" className="car" /></div>
