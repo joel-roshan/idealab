@@ -54,7 +54,7 @@ a {
     color: black;
 }
 
-/* .navtext {
+ .navtext {
     padding-bottom: 0.5rem;
     position: relative;
     margin: 30px;
@@ -73,7 +73,7 @@ a {
 }
 .navtext:hover::after {
     transform: scale(1,1);
-} */
+} 
 .head-announce{
     font-family: sans-serif;
     transform: translateZ(10px)
@@ -153,13 +153,15 @@ a {
 }
 .about {
     
-    height:50vh;
+    height: auto;
+    padding: 30px;
     background-color: #222222;
     border-radius: 5px;
 }
 .about-content-image {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 ::-webkit-scrollbar
 {
@@ -273,12 +275,13 @@ a {
         margin-top: 10px;
         position: unset;
         width: 77vw;
+        height: auto;
         background-color: aliceblue;
         color: black;
         padding: 10px;
     }
     .about {
-        height: 100vh;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
