@@ -10,10 +10,10 @@ export class EventCard extends Component {
                         <img id = "thumbnail"src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU'/>                        
                     </div>
                     <div className='date'>
-                        <p>04/03/2022</p>
+                        <p id='event-posted'>04/03/2022</p>
                     </div>
                     <div className='description'>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.....</p>
+                        <p id='event-desc'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.....</p>
                     </div>
                 </div>
             </div>

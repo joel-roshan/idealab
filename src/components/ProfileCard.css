@@ -1,4 +1,4 @@
-.event-Holder {
+.profile-Holder {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,7 +6,7 @@
     margin: 30px;
     margin-left: 20px;
     padding: 15px;
-    background-color: white;
+    background-color: aliceblue;
     border-radius: 5px;
     border-right: black solid 2px;
     border-bottom: black solid 2px;
@@ -14,13 +14,17 @@
     transform-style: preserve-3d;
     transform: perspective(1000px);
 }
-#thumbnail {
-    border-radius: 3px;
-    transform: translateZ(30px) 
+.profilepic {
+    display: flex;
+    justify-content: center;
 }
-#event-posted {
-    color: black;
+#profilepicture {
+    border-radius: 50px;
+    transform: translateZ(30px);
+    width: 100px;
+    height: auto;
 }
-#event-desc {
-    color: black;
+.description-team {
+    display: flex;
+    justify-content: center;
 }

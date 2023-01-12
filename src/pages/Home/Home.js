@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import './Home.css'
 import car from "../../asset/car.jpg"
 import EventCard from '../../components/EventCard'
+import ProfileCard from '../../components/ProfileCard'
 
 export function AddLibrary(urlOfTheLibrary) {
   const script = document.createElement('script');
@@ -16,13 +17,13 @@ const Home = () => {
     <div>
       <Header />
       <div className="carousel">
-            <div class="announcement" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
-            <h2 className="head-announce">from the lab</h2>
-            <p className="announce">announcement 1</p>
-            <p className="announce">announcement 2</p>
-            <p className="announce">announcement 3</p>
-            <p className="announce">announcement 4</p>
-          </div>
+        <div class="announcement" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+          <h2 className="head-announce">from the lab</h2>
+          <p className="announce">announcement 1</p>
+          <p className="announce">announcement 2</p>
+          <p className="announce">announcement 3</p>
+          <p className="announce">announcement 4</p>
+        </div>
 
         <div className="image"><img src={car} alt="" className="car" /></div>
       </div>
@@ -48,15 +49,43 @@ const Home = () => {
           <h2>Events</h2>
         </div>
         <div className='event-hold-multi'>
-        <div><EventCard /></div>
-        <div><EventCard /></div>
-        <div><EventCard /></div>
-        <div><EventCard /></div>
+          <div><EventCard /></div>
+          <div><EventCard /></div>
+          <div><EventCard /></div>
+          <div><EventCard /></div>
         </div>
-          </div>
-          {AddLibrary(
-  './tilt.js')}
-    
+      </div>
+      <hr className="carouselrule" />
+      <div className='team'>
+        <div className='team-head'>
+          <h2 id="team-txt">Team</h2>
+        </div>
+
+        <div className='faculties'>
+          <h3 id='faculties-txt'>Faculties</h3>
+        </div>
+
+        <div className='team-hold-multi'>
+          <div><ProfileCard /></div>
+          <div><ProfileCard /></div>
+          <div><ProfileCard /></div>
+          <div><ProfileCard /></div>
+        </div>
+
+        <div className='student'>
+          <h3 id='student-txt'>Student in charges</h3>
+        </div>
+
+        <div className='team-hold-multi'>
+          <div><ProfileCard /></div>
+          <div><ProfileCard /></div>
+          <div><ProfileCard /></div>
+          <div><ProfileCard /></div>
+        </div>
+      </div>
+      {AddLibrary(
+        './tilt.js')}
+
     </div>
   )
 }
