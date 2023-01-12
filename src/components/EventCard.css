@@ -24,3 +24,24 @@
 #event-desc {
     color: black;
 }
+#equipment-title {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#thumbnail-facility {
+    width: 150px;
+    height: auto;
+}
+.facility-holder {
+    display: flex;
+    flex-direction: column;
+}
+.thumbnail-facility-holder {
+    display: flex;
+    justify-content: center;
+}
+.equipment-title-holder {
+    display: flex;
+    justify-content: center;
+}

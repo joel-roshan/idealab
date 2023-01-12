@@ -2,8 +2,9 @@ import React from 'react'
 import Header from '../../components/Header'
 import './Home.css'
 import car from "../../asset/car.jpg"
-import EventCard from '../../components/EventCard'
-import ProfileCard from '../../components/ProfileCard'
+import EventCard from '../../components/EventCard';
+import ProfileCard from '../../components/ProfileCard';
+import FacilitiesCard from '../../components/FacilitiesCard';
 
 export function AddLibrary(urlOfTheLibrary) {
   const script = document.createElement('script');
@@ -46,7 +47,7 @@ const Home = () => {
       <hr className="carouselrule" />
       <div className='event'>
         <div className='event-head'>
-          <h2>Events</h2>
+          <h2 id = "event-txt-head">Events</h2>
         </div>
         <div className='event-hold-multi'>
           <div><EventCard /></div>
@@ -82,6 +83,17 @@ const Home = () => {
           <div><ProfileCard /></div>
           <div><ProfileCard /></div>
         </div>
+      </div>
+      <hr className="carouselrule" />
+      <div className='equipments'>
+        <div className='equipment-heading'><h3 id='equipment-head'>We have</h3></div>
+        <div className='equipment-holder'>
+        <FacilitiesCard />
+        <FacilitiesCard />
+        <FacilitiesCard />
+        <FacilitiesCard /> 
+        </div>
+
       </div>
       {AddLibrary(
         './tilt.js')}

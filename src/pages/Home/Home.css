@@ -46,6 +46,7 @@ scroll-behavior: auto;
     padding: 10px;
     border-right: solid black ;
     border-width: 5px;
+    z-index: 10;
     
 }
 a {
@@ -83,10 +84,12 @@ a {
     border-radius: 2px;
     padding: 10px;
     transition: background 0.23s ease-in;
+    
 
 }
 .announce:hover {
-    background: rgb(0, 255, 0);
+    background: black;
+    color: white;
 }
 .carouselrule {
     height: 3px;
@@ -98,6 +101,26 @@ a {
     background-size: 200% auto;
     animation: gradientmove 30s infinite linear;
 }
+.about-txt {
+    color: white;
+}
+.about-txt:hover
+{
+    background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+    background-size: 200% auto;
+    background-clip: text;
+    color: transparent;
+    animation: gradientmove 8s infinite linear;
+}
+#event-txt-head:hover{
+    background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientmove 8s infinite linear;
+    height: 100%;
+}
+
 @keyframes gradientmove {
     to {
         background-position: -200% center;
@@ -119,11 +142,12 @@ a {
     width:30vw;
     color: white;
 }
-.about-txt {
-    color: #ffff;
+.about-txt-hold {
+    
     margin-left: 10vw;
     opacity: 20px;
 }
+
 .about-txt-hold {
     padding: 20px;
 }
@@ -162,6 +186,13 @@ a {
 #team-txt {
     color: white;
 }
+#team-txt:hover {
+    background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientmove 8s infinite linear;
+}
 .faculties{
     display: flex;
     justify-content: right;
@@ -175,4 +206,48 @@ a {
 }
 #student-txt {
     color: white;
+}
+.event-head {
+    padding: 0px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    transition: background-color 0.23s ease-in;
+}
+.event-head:hover {
+    background-color: #222222;
+}
+.equipments {
+    background-color: gainsboro;
+    padding: 5vw;
+}
+
+.equipment-holder {
+    display: flex;
+    justify-content: center;
+    
+}
+#equipment-head:hover {
+    background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientmove 5s infinite linear;
+    font-size: 25px;
+}
+#equipment-head {
+    font-size: 25px;
+}
+.equipment-heading {
+    padding: 0px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    transition: background 0.23s ease-in;
+}
+
+.equipment-heading:hover {
+    background: #222222;
 }
