@@ -245,7 +245,7 @@ a {
     display: flex;
     justify-content: center;
     background-color: transparent;
-    transition: background 0.23s ease-in;
+    transition: background-color 0.23s ease-in;
 }
 
 .equipment-heading:hover {
