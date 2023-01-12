@@ -226,6 +226,7 @@ a {
 .equipment-holder {
     display: flex;
     justify-content: center;
+    overflow-x: scroll;
     
 }
 #equipment-head:hover {
@@ -250,4 +251,69 @@ a {
 
 .equipment-heading:hover {
     background: #222222;
+}
+@media (max-width:1000px) {
+
+    .carousel {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 80vw;
+        align-items: center;
+        padding: 0px;
+    }
+    .car{
+        width: 80vw;
+        height:auto;
+        padding: 0;
+        margin: 0;
+        position: unset;
+    }
+    .announcement{
+        margin-top: 10px;
+        position: unset;
+        width: 77vw;
+        background-color: aliceblue;
+        color: black;
+        padding: 10px;
+    }
+    .about {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-txt-hold{
+        margin: 0;
+        padding: 0;
+        padding-bottom: 10px;
+    }
+    .about-content-image {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .about-image-hold {
+        height: auto;
+    }
+    .about-image {
+        width: 50vw;
+        height: auto;
+    }
+    .about-content {
+        margin-top: 50px;
+        width: 60vw;
+        background-color: aliceblue;
+        border-radius: 2px;
+        color: black;
+        padding: 20px;
+    }
+    .about-content-hold {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

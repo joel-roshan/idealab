@@ -18,7 +18,7 @@ const Home = () => {
     <div>
       <Header />
       <div className="carousel">
-        <div class="announcement" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+        <div className="announcement" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
           <h2 className="head-announce">from the lab</h2>
           <p className="announce">announcement 1</p>
           <p className="announce">announcement 2</p>
@@ -29,7 +29,7 @@ const Home = () => {
         <div className="image"><img src={car} alt="" className="car" /></div>
       </div>
       <hr className="carouselrule" />
-      <div className="about" id="about">
+      <div className="about">
         <div className="about-txt-hold">
           <h2 className="about-txt">About idea Lab</h2>
         </div>
