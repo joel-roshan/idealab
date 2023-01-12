@@ -8,7 +8,7 @@ const Header = () => {
       <div className="header">
         
           <div className="hello">
-            <p id="hello">idealab MEC</p>
+            <p id="hello">IDEALab</p>
           </div>
 
           <div className="navbigdiv">
