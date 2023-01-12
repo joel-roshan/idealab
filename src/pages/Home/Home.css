@@ -144,8 +144,35 @@ a {
 .event
 {
     padding: 5vw;
+    background-color: gainsboro;
 }
 .event-hold-multi {
     display: flex;
     overflow-x: auto;
+}
+.team
+{
+    padding: 5vw;
+    background-color: #222222;
+}
+.team-hold-multi {
+    display: flex;
+    overflow-x: auto;
+}
+#team-txt {
+    color: white;
+}
+.faculties{
+    display: flex;
+    justify-content: right;
+}
+.student{
+    display: flex;
+    justify-content: right;
+}
+#faculties-txt {
+    color: white;
+}
+#student-txt {
+    color: white;
 }
