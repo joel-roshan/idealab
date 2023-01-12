@@ -10,7 +10,7 @@ font-family: "Roboto Mono";
 scroll-behavior: auto;
 }
 
-.buttons-nav {
+/* .buttons-nav {
     position: absolute;
     right: 10vw;
     border:black solid;
@@ -18,8 +18,8 @@ scroll-behavior: auto;
     border-radius: 4px;
 }
 .buttons-nav:hover {
-    background-color: rgba(0, 0, 0, 0.198);
-}
+    background-color: rgba(0, 0, 0, 0.198); */
+
 
 .car{
     display: block;
@@ -54,7 +54,7 @@ a {
     color: black;
 }
 
-.navtext {
+/* .navtext {
     padding-bottom: 0.5rem;
     position: relative;
     margin: 30px;
@@ -73,7 +73,7 @@ a {
 }
 .navtext:hover::after {
     transform: scale(1,1);
-}
+} */
 .head-announce{
     font-family: sans-serif;
     transform: translateZ(10px)

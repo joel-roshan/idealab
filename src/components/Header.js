@@ -3,13 +3,21 @@ import "./Header.css"
 import logo from "../asset/logo.png"
 import { Link } from 'react-router-dom'
 
+
 const Header = () => {
+  
+  
   return (
       <div className="header">
         
           <div className="hello">
             <p id="hello">idealab MEC</p>
           </div>
+          <a href = "#" className = "toggle-button">
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          </a>
 
           <div className="navbigdiv">
             
