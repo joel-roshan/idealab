@@ -1,25 +1,26 @@
-import React from 'react'
+import React, { useState }from 'react'
 import "./Header.css"
 import logo from "../asset/logo.png"
 import { Link } from 'react-router-dom'
 
 
 const Header = () => {
-  
+  const [showMediaIcons, setShowMediaIcons] = useState(false);
   
   return (
       <div className="header">
         
           <div className="hello">
-            <p id="hello">IDEALab</p>
+            <p id="hello">idealab MEC</p>
           </div>
-          <a href = "#" className = "toggle-button">
+          <a href = "#" className = "toggle-button" onClick={() => setShowMediaIcons(!showMediaIcons)}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
           </a>
 
-          <div className="navbigdiv">
+          <div className={showMediaIcons ? "navbigdiv mobnavbigdiv" : "navbigdiv"
+          }>
             
             <div className="home">
               <Link to="/" className="navtext">Home</Link>
@@ -41,6 +42,13 @@ const Header = () => {
                 </div>
 
             </div> 
+            
+            
+          <a href = "#" className = "toggle-button" onClick={() => setShowMediaIcons(!showMediaIcons)}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          </a>
           
           </div>
           

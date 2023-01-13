@@ -166,7 +166,7 @@ scroll-behavior: auto;
     .navbigdiv
     {
          display: none;
-        flex-direction: column;
+        /* flex-direction: column; */
 
     }
     .header
@@ -203,9 +203,10 @@ scroll-behavior: auto;
         padding-bottom: 3px;
         flex-direction: column;
     }
-    .navbigdiv.active
+    .mobnavbigdiv
     {
         display:flex;
+        flex-direction: column;
     }
     
 }
