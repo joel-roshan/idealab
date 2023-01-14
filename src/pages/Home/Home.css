@@ -222,13 +222,15 @@ a {
 }
 .equipments {
     background-color: gainsboro;
-    padding: 5vw;
 }
 
 .equipment-holder {
     display: flex;
-    justify-content: center;
-    overflow-x: scroll;
+    overflow-x: auto;
+    margin-top: 0vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding-top: 0;
     
 }
 #equipment-head:hover {
@@ -245,6 +247,7 @@ a {
 .equipment-heading {
     padding: 0px;
     width: 150px;
+    margin: 5vw;
     display: flex;
     justify-content: center;
     background-color: transparent;
@@ -279,6 +282,15 @@ a {
         background-color: aliceblue;
         color: black;
         padding: 10px;
+    }
+    .head-announce {
+        transform: translateZ(0px);
+    }
+    .equipment-holder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .about {
         height: auto;

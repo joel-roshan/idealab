@@ -1,7 +1,8 @@
-.event-Holder {
+.facilities-Holder {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 270px;
     margin: 30px;
     margin-left: 20px;
@@ -14,11 +15,14 @@
     transform-style: preserve-3d;
     transform: perspective(1000px);
 }
-#event-thumbnail-image {
+#facilities-thumbnail-image {
+    width: 200px;
     border-radius: 3px;
     transform: translateZ(30px) 
 }
-#event-posted {
+#facilities-title-text {
+    font-family: sans-serif;
+    font-weight: bold;
     color: black;
 }
 #event-desc {
@@ -29,6 +33,16 @@
     font-weight: bold;
 }
 
+#thumbnail-facility {
+    width: 150px;
+    height: auto;
+    border-radius: 3px;
+}
+
+.thumbnail-facility-holder {
+    display: flex;
+    justify-content: center;
+}
 .equipment-title-holder {
     display: flex;
     justify-content: center;

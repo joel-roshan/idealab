@@ -7,12 +7,14 @@ import Facilities from './pages/Facilites/Facilities';
 import Events from './pages/Events/Events';
 import Team from './pages/Team/Team';
 import Contact from './pages/Contact/Contact';
+import {Helmet} from "react-helmet";
 
 
 
 function App() {
   return (
     <div>
+
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/request' element={<Request />} />

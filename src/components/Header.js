@@ -11,7 +11,7 @@ const Header = () => {
       <div className="header">
         
           <div className="hello">
-            <p id="hello">idealab MEC</p>
+            <p id="hello">IDEALab</p>
           </div>
           <a href = "#" className = "toggle-button" onClick={() => setShowMediaIcons(!showMediaIcons)}>
           <span className="bar"></span>

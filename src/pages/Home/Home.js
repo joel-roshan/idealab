@@ -6,13 +6,13 @@ import EventCard from '../../components/EventCard';
 import ProfileCard from '../../components/ProfileCard';
 import FacilitiesCard from '../../components/FacilitiesCard';
 
+
 export function AddLibrary(urlOfTheLibrary) {
   const script = document.createElement('script');
   script.src = urlOfTheLibrary;
   script.async = true;
   document.body.appendChild(script);
 }
-
 const Home = () => {
   return (
     <div>
