@@ -95,7 +95,54 @@
     background-color: #0000c5;
     cursor: pointer;
 }
-@media (max-width:1000px)
+@media (max-width:1000px) and (min-width: 701px)
+{
+    .container
+    {
+        display: flex;
+        flex-direction: column;
+        width:95%;
+        align-items:flex-start;
+        /* border: 1px solid black; */
+        margin-left: 20px;
+
+    }
+    .input-container
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .sub-btn
+    {
+        margin-bottom: 10px;
+    }
+    .btnsub
+    {
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: blue;
+    border-radius: 6px;
+    border: 1px solid blue;
+    }
+    .box1
+    {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .sub-box
+    {
+        width: 98.4%;
+    }
+    .message
+    {
+        text-align: left;
+    }
+    
+}
+@media (max-width:700px) 
 {
     .container
     {
