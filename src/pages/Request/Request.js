@@ -25,14 +25,27 @@ const Request = () => {
             <input className='input-box' type="text" placeholder='Email *' />
           </div>
           <div className="box"> 
+            <input className='input-box' type="text" placeholder='College *' />
+          </div> 
+          <div className="box"> 
             <input className='input-box' type="text" placeholder='Class *' />
+          </div> 
+          <div className="box"> 
+            <select id='equipment' className='input-box'>
+              <option value="equipment">Select equipment *</option>
+              <option value="cnc-machine">CNC Machine</option>
+              <option value="3D-printer">3D Printer</option>
+              <option value="Laser-Beam">Laser Beam</option>
+              <option value="Sand-Cutter">Sand Cutter</option>
+            </select>
           </div> 
           <div className="box1"> 
             <textarea className='sub-box' type="text" placeholder='Explain briefly what equipment you need an what you will be using it for *' />
           </div>
         </div>
         <div className="sub-btn">
-          <button className='btnsub'>Submit</button>
+          <input type="submit" className='btnsub' />
+          {/* <button className='btnsub'>Submit</button> */}
         </div>
       </div>
     </div>
