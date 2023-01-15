@@ -35,8 +35,8 @@ const Request = () => {
               <option value="equipment" className='equip'>Select equipment *</option>
               <option value="cnc-machine">CNC Machine</option>
               <option value="3D-printer">3D Printer</option>
-              <option value="Laser-Beam">Laser Beam</option>
-              <option value="Sand-Cutter">Sand Cutter</option>
+              <option value="Laser-Beam">Laser Cutter</option>
+              <option value="Sand-Cutter">Sand Blast</option>
             </select>
           </div> 
           <div className="box1"> 
