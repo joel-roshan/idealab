@@ -28,7 +28,7 @@ const Request = () => {
             <input className='input-box' type="text" placeholder='Class *' />
           </div> 
           <div className="box1"> 
-            <input className='sub-box' type="text" placeholder='Explain briefly what equipment you need an what you will be using it for *' />
+            <textarea className='sub-box' type="text" placeholder='Explain briefly what equipment you need an what you will be using it for *' />
           </div>
         </div>
         <div className="sub-btn">
