@@ -1,0 +1,96 @@
+.container
+{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 100px auto 100px;
+    grid-template-rows: 100px 400px 100px ;
+    grid-template-areas: 
+    ". m ."
+    ". i ."
+    ". s .";
+    gap: 10px;
+
+}
+.input-container
+{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    /* border:1px solid black; */
+    gap: 40px;
+    /* width: 45vw; */
+    grid-area: i;
+}
+.message
+{
+    /* border: 1px solid green; */
+    grid-area: m;
+    
+}
+.input-box
+{
+    width:98%;
+    height: 45px;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 5px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+
+
+
+.box
+{
+    /* border: 1px blue solid; */
+    height:45 px;
+    padding: 0px;
+    
+}
+
+.box1
+{
+    
+    /* border: 1px solid pink; */
+    grid-column: 1/-1;
+    height: 200px;
+}
+.sub-box
+{
+    height: 96%;
+    width: 99%;
+    text-align: start;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding-left: 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.sub-btn
+{
+    grid-area: s;
+    /* border: 1px solid black; */
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+.btnsub
+{
+    width: 100px;
+    height: 60%;
+    color: white;
+    background-color: blue;
+    border-radius: 6px;
+    border: 1px solid blue;
+}
+.btnsub:hover
+{
+    background-color: #0000c5;
+    cursor: pointer;
+}
