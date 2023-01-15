@@ -32,7 +32,7 @@ const Request = () => {
           </div> 
           <div className="box"> 
             <select id='equipment' className='input-box'>
-              <option value="equipment">Select equipment *</option>
+              <option value="equipment" className='equip'>Select equipment *</option>
               <option value="cnc-machine">CNC Machine</option>
               <option value="3D-printer">3D Printer</option>
               <option value="Laser-Beam">Laser Beam</option>
