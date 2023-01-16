@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {Component} from 'react'
 import './ProfileCard.css'
 
-const ProfileCard = () => {
-    return (
+export class ProfileCard extends Component {
+    render() { 
+        return (
         <div>
             <div className='profile-Holder' data-tilt data-tilt-scale="1.1" >
                 <div className='profilepic'>
@@ -14,6 +15,7 @@ const ProfileCard = () => {
             </div>
         </div>
     )
+}
 }
 
 export default ProfileCard

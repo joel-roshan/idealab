@@ -39,15 +39,14 @@ scroll-behavior: auto;
 }
 .btnnav {
     
-    border:black solid;
-    border-width: 1px;
+    border: rgb(56, 56, 255) solid 2px;
     border-radius: 4px;
     margin-top: 1rem;
     display: flex;
    
 }
 .btnnav:hover {
-    background-color: rgba(0, 0, 0, 0.198);
+    background: aliceblue;
 }
 .access {
     font-family: sans-serif;
@@ -82,6 +81,7 @@ scroll-behavior: auto;
 
 .navtext::after {
     content: "";
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -92,7 +92,7 @@ scroll-behavior: auto;
 }
 .navtext:hover::after {
     transform: scale(1,1);
-}
+} 
 .logocollege {
     display: inline-block;
     
