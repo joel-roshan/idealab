@@ -7,13 +7,28 @@
     margin-top: 50px;
     display: grid;
     grid-template-columns: 100px auto 100px;
-    grid-template-rows: 100px 400px 100px ;
+    grid-template-rows: 100px 500px 100px ;
     grid-template-areas: 
     ". m ."
     ". i ."
     ". s .";
     gap: 10px;
 
+}
+#equipment
+{
+    padding: 0;
+    margin: 0;
+    width: 101%;
+    height: 100%;
+    color: #7a7a7a;
+
+    
+    
+}
+.equip
+{
+    color: #a7a7a7;
 }
 .input-container
 {
@@ -49,6 +64,7 @@
     /* border: 1px blue solid; */
     height:45 px;
     padding: 0px;
+
     
 }
 
@@ -95,8 +111,66 @@
     background-color: #0000c5;
     cursor: pointer;
 }
-@media (max-width:1000px)
-{
+@media (max-width:1000px) and (min-width: 701px)
+{   
+    
+    .container
+    {
+        display: flex;
+        flex-direction: column;
+        width:95%;
+        align-items:flex-start;
+        /* border: 1px solid black; */
+        margin-left: 20px;
+
+    }
+    .input-container
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #equipment
+    {
+        height: 60px;
+        width: 100.5%;
+    }
+    .sub-btn
+    {
+        margin-bottom: 10px;
+    }
+    .btnsub
+    {
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: blue;
+    border-radius: 6px;
+    border: 1px solid blue;
+    }
+    .box1
+    {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .sub-box
+    {
+        width: 98.4%;
+    }
+    .message
+    {
+        text-align: left;
+    }
+    
+}
+@media (max-width:700px) 
+{  
+    #equipment
+    {
+        width: 105%;
+        height: 60px;
+    }
     .container
     {
         display: flex;
