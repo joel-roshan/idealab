@@ -1,3 +1,4 @@
+
 .container
 {
     /* display: flex;
@@ -54,6 +55,7 @@
     padding: 5px;
     padding-left: 10px;
     font-size: 20px;
+    font-family: "Roboto Mono"
 }
 
 
@@ -105,6 +107,7 @@
     background-color: blue;
     border-radius: 6px;
     border: 1px solid blue;
+    font-size: large;
 }
 .btnsub:hover
 {

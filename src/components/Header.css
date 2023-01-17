@@ -75,6 +75,7 @@ scroll-behavior: auto;
     padding-bottom: 0.5rem;
     position: relative;
     margin: 30px;
+    font-weight: 900;
     
     
 }
@@ -85,10 +86,17 @@ scroll-behavior: auto;
     left: 0;
     bottom: 0;
     width: 100%;
+    background-size: 200% auto;
     transform: scale(0,1);
     height: 2px;
-    background-color: darkblue;
+    background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
     transition: transform 0.3s ease;
+    animation: gradientmove 1s infinite linear;
+}
+@keyframes gradientmove {
+    to {
+        background-position: -200% center;
+      }
 }
 .navtext:hover::after {
     transform: scale(1,1);
