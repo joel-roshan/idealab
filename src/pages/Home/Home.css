@@ -25,6 +25,7 @@ scroll-behavior: auto;
 }
 .announcement{
     position: absolute;
+    padding: 30px;
     top:30vh;
     right: 5vw;
     height: 50vh;
@@ -34,7 +35,6 @@ scroll-behavior: auto;
     background-color: #ffff;
     width: 400px;
     border-radius: 10px;
-    padding: 10px;
     border-right: solid black ;
     border-width: 5px;
     z-index: 10;

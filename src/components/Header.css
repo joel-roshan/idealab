@@ -39,19 +39,21 @@ scroll-behavior: auto;
 }
 .btnnav {
     
-    border: rgb(56, 56, 255) solid 2px;
+    background-color: #212121;
     border-radius: 4px;
     margin-top: 1rem;
+    padding: 5px;
     display: flex;
-   
+    transition: 0.25s ease-in-out;
 }
 .btnnav:hover {
-    background: aliceblue;
 }
 .access {
     font-family: sans-serif;
     padding: 10px;
-    color: black;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
 
 }a {
     text-decoration: none;
@@ -75,7 +77,7 @@ scroll-behavior: auto;
     padding-bottom: 0.5rem;
     position: relative;
     margin: 30px;
-    font-weight: 900;
+    font-weight: 300;
     
     
 }

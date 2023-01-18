@@ -8,18 +8,19 @@ import FacilitiesCard from '../../components/FacilitiesCard';
 
 
 export function AddLibrary(urlOfTheLibrary) {
+  if(window.innerWidth >720) {
   const script = document.createElement('script');
   script.src = urlOfTheLibrary;
   script.async = true;
   document.body.appendChild(script);
-}
+} }
 const Home = () => {
   return (
     <div>
       <Header />
       <div className="carousel">
         <div className="announcement" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
-          <h2 className="head-announce">from the lab</h2>
+          <h2 className="head-announce">From the lab</h2>
           <p className="announce">announcement 1</p>
           <p className="announce">announcement 2</p>
           <p className="announce">announcement 3</p>

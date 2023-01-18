@@ -31,7 +31,7 @@ const Header = () => {
             </div>
 
             <div className="nav2">
-                <div className="btnnav">
+                <div className="btnnav" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
                     <Link to='/request' className='access'>Request Access</Link>
                   </div>
 
