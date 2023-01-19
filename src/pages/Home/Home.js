@@ -12,6 +12,12 @@ import FacilitiesCard from '../../components/FacilitiesCard';
 
 
 export function AddLibrary(urlOfTheLibrary) {
+    const script = document.createElement('script');
+    script.src = urlOfTheLibrary;
+    script.async = true;
+    document.body.appendChild(script);
+}
+export function Addscript(urlOfTheLibrary) {
   if (window.innerWidth > 720) {
     const script = document.createElement('script');
     script.src = urlOfTheLibrary;
@@ -23,6 +29,7 @@ const Home = () => {
   return (
     <div>
       <Header />
+      <div id="progressBar"></div>
       <div className="carousel">
         <div className="announcement" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
           <h2 className="head-announce">From the lab</h2>
@@ -189,8 +196,10 @@ const Home = () => {
 
 
       </div>
-      {AddLibrary(
+      {Addscript(
         './tilt.js')}
+        {AddLibrary(
+        './scrollbar.js')}
 
     </div>
   )

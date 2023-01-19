@@ -10,9 +10,10 @@
     width:100%;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100000;
     box-shadow:0 0 2px 0;
     border-bottom: 2px solid black;
+    transition: ease 0.25s;
     
 }
 
@@ -88,12 +89,12 @@ scroll-behavior: auto;
     left: 0;
     bottom: 0;
     width: 100%;
+    color: transparent;
     background-size: 200% auto;
     transform: scale(0,1);
     height: 2px;
     background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
     transition: transform 0.3s ease;
-    animation: gradientmove 1s infinite linear;
 }
 @keyframes gradientmove {
     to {
@@ -101,6 +102,7 @@ scroll-behavior: auto;
       }
 }
 .navtext:hover::after {
+    animation: gradientmove 3s infinite linear;
     transform: scale(1,1);
 } 
 .logocollege {
@@ -143,6 +145,7 @@ scroll-behavior: auto;
     vertical-align: middle;
     
     width: 100%;
+    transition: 0.25s ease;
 }
 .toggle-button
 {
@@ -215,6 +218,7 @@ scroll-behavior: auto;
     {
         display:flex;
         flex-direction: column;
+        transition: 0.25s ease;
     }
     
 }
