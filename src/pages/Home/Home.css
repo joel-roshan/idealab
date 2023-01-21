@@ -49,6 +49,8 @@ body {
 
 .car {
     height: auto;
+    margin-left: 20px;
+    margin-top: 50px;
     width: 80vw;
     border-radius: 4px;
     grid-column-start: 2;
@@ -63,9 +65,11 @@ body {
 }
 
 .announcement {
+    display: block;
+    margin-top: 20vh;
+    margin-bottom: auto;
     grid-column: 6;
     grid-row: 1;
-    margin-top: 20vh;
     height: fit-content;
     transform-style: preserve-3d;
     transform: perspective(1000px);
@@ -119,6 +123,19 @@ a {
     transition: 0.25s ease-in-out;
     animation: gradientmove 3s infinite linear;
 }
+.carouselrule::before {
+    content: "";
+    height: 14px;
+    width: 90vw;
+    position: absolute;
+    background: linear-gradient(271deg, #a0e9ff 30%, #a162e8 50%, #f093b0 70%, #edca85 94%);
+    border: none;
+    background-size: 200% auto;
+    transition: 0.25s ease-in-out;
+    animation: gradientmove 3s infinite linear;
+    filter: blur(20px);
+}
+
 
 .about-txt {
     color: white;
@@ -140,6 +157,7 @@ a {
     transition: 0.25s ease-in-out;
     animation: gradientmove 3s infinite linear;
     height: 100%;
+
 }
 
 @keyframes gradientmove {

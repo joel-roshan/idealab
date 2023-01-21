@@ -47,8 +47,6 @@ scroll-behavior: auto;
     display: flex;
     transition: 0.25s ease-in-out;
 }
-.btnnav:hover {
-}
 .access {
     font-family: sans-serif;
     padding: 10px;
