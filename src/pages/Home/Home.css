@@ -184,7 +184,6 @@ a {
     width: 30vw;
     color: white;
 }
-
 .about-txt-hold {
 
     margin-left: 10vw;
@@ -606,6 +605,7 @@ a {
         flex: 100%;
         max-width: 100%;
         margin: 30px;
+        padding: 80px;
     }
 
     .image-grid-holder {

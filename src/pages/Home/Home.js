@@ -49,7 +49,8 @@ const Home = () => {
 
         <div className="about-content-image">
           <div className="about-content-hold">
-            <p className="about-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis beatae dolore
+            <p className="about-content" >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis beatae dolore
               sint ab blanditiis repellat rerum tempore ipsa, quasi sapiente. Sed labore, illum distinctio ad
               earum
               inventore nobis dolor cumque!</p>
