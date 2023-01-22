@@ -7,7 +7,6 @@ import Facilities from './pages/Facilites/Facilities';
 import Events from './pages/Events/Events';
 import Team from './pages/Team/Team';
 import Contact from './pages/Contact/Contact';
-import {Helmet} from "react-helmet";
 
 
 
