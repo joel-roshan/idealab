@@ -52,8 +52,7 @@ const Home = () => {
             <p className="about-content" >
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis beatae dolore
               sint ab blanditiis repellat rerum tempore ipsa, quasi sapiente. Sed labore, illum distinctio ad
-              earum
-              inventore nobis dolor cumque!</p>
+              earum inventore nobis dolor cumque!</p>
           </div>
           <div className="about-image-hold"><img src={car} alt="about pic" className="about-image" /></div>
         </div>
@@ -61,7 +60,7 @@ const Home = () => {
       <hr className="carouselrule" />
       <div className='event'>
         <div className='event-head'>
-          <h2 id="event-txt-head">Events</h2>
+          <h2 id="event-txt-head">Events</h2><span id='ticket'>🎟️</span>
         </div>
         <div className='event-hold-multi'>
           <div><EventCard /></div>

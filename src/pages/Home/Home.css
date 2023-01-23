@@ -125,7 +125,7 @@ a {
 }
 .carouselrule::before {
     content: "";
-    height: 14px;
+    height: 3px;
     width: 90vw;
     position: absolute;
     background: linear-gradient(271deg, #a0e9ff 30%, #a162e8 50%, #f093b0 70%, #edca85 94%);
@@ -134,6 +134,20 @@ a {
     transition: 0.25s ease-in-out;
     animation: gradientmove 3s infinite linear;
     filter: blur(20px);
+    transform: translateY(-5px);
+}
+.carouselrule::after {
+    content: "";
+    height: 3px;
+    width: 90vw;
+    position: absolute;
+    background: linear-gradient(271deg, #a0e9ff 30%, #a162e8 50%, #f093b0 70%, #edca85 94%);
+    border: none;
+    background-size: 200% auto;
+    transition: 0.25s ease-in-out;
+    animation: gradientmove 3s infinite linear;
+    filter: blur(30px);
+    transform: translateY(-5px);
 }
 
 
@@ -159,7 +173,26 @@ a {
     height: 100%;
 
 }
-
+#ticket{
+    margin: 10px;
+    background-color: aliceblue;
+    font-size: 60px;
+    width: 80px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 80px;
+    animation: wave-animation 3s infinite;
+}
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
 @keyframes gradientmove {
     to {
         background-position: -200% center;
@@ -272,10 +305,11 @@ a {
 }
 
 .event-head {
-    padding: 0px;
-    width: 100px;
+    padding: 10px;
+    width: fit-content;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     background-color: transparent;
     transition: background-color 0.23s ease-in;
 }
