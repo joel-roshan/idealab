@@ -1,0 +1,87 @@
+.main-event
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    color: #606060;
+    gap: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+}
+.event-card
+{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px;
+    gap: 10px;
+}
+
+.imgholder
+{
+    display: flex;
+    /* border: 1px solid black; */
+    padding-top: 7px;
+
+}
+img
+{
+    width: 150px ;
+    height: 150px;
+    border-radius: 10px;
+}
+.event-info
+{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid blue; */
+    width: 100%;
+}
+.title-btn
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn-info
+{
+    box-shadow: 0 0 5px;
+    background-color: black;
+    border-radius: 7px;
+}
+.more-btn
+{
+    background-color: black;
+    color: white;
+    width: 60px;
+    height: 30px;
+    border-radius: 7px;
+}
+.date-location
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.date
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:5px;
+}
+.location
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:5px;
+}
+.status-time
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
