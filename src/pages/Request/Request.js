@@ -16,7 +16,7 @@ const Request = () => {
         </div> 
         <div className="input-container">
           <div className="box"> 
-            <input className='input-box' type="text" placeholder='Name *' />
+            <input className='input-box' required = "True" type="text" placeholder='Name *' />
           </div>
           <div className="box"> 
             <input className='input-box' type="text" placeholder='Phone No. *' />

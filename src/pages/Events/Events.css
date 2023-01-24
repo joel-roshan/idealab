@@ -1,3 +1,20 @@
+#event-body {
+    background-color: #111;
+    min-height: 100vh;
+    height: fit-content;
+}
+.heading {
+    width: 100%;
+    display: flex;
+    padding-bottom: 30px;
+    justify-content: center;
+}
+#event-heading {
+    color: aliceblue;
+}
+#title-text {
+    font-family: sans-serif;
+}
 .main-event
 {
     display: grid;
@@ -13,9 +30,11 @@
     display: flex;
     flex-direction: row;
     padding: 10px 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px;
+    border-radius: 10px;
     gap: 10px;
+    background-color: aliceblue;
+    padding: 20px;
+    color: black;
 }
 
 .imgholder
@@ -30,6 +49,7 @@ img
     width: 150px ;
     height: 150px;
     border-radius: 10px;
+    object-fit: cover;
 }
 .event-info
 {
@@ -47,14 +67,24 @@ img
 }
 .btn-info
 {
-    box-shadow: 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: black;
     border-radius: 7px;
+    width: 100px;
 }
 .more-btn
 {
+    display: flex;
+   
     background-color: black;
+    justify-content: center;
+    align-items: center;
     color: white;
+    border: none;
+    font-size: large;
+    padding: 20px;
     width: 60px;
     height: 30px;
     border-radius: 7px;
