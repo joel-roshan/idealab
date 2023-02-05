@@ -63,10 +63,24 @@ const Home = () => {
           <h2 id="event-txt-head">Events</h2><span id='ticket'>🎟️</span>
         </div>
         <div className='event-hold-multi'>
-          <div><EventCard /></div>
-          <div><EventCard /></div>
-          <div><EventCard /></div>
-          <div><EventCard /></div>
+          <div><EventCard 
+            date ="22-12-2222"
+            img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
+            des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
+          /></div>
+         <div><EventCard 
+            date ="22-12-2222"
+            img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
+            des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
+          /></div><div><EventCard 
+          date ="22-12-2222"
+          img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
+          des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
+        /></div><div><EventCard 
+        date ="22-12-2222"
+        img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
+        des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
+      /></div>
         </div>
       </div>
       <hr className="carouselrule" />
@@ -80,10 +94,21 @@ const Home = () => {
         </div>
 
         <div className='team-hold-multi'>
-          <div><ProfileCard /></div>
-          <div><ProfileCard /></div>
-          <div><ProfileCard /></div>
-          <div><ProfileCard /></div>
+        <div><ProfileCard
+            name="cat"
+            img ="https://png.pngtree.com/png-clipart/20190520/original/pngtree-melancholy-cat-hand-drawn-avatar-design-paintedcatavatarpretty-cat-png-image_4078730.jpg"
+          /></div>
+          <div><ProfileCard 
+            name="John Appleseed"
+            img="https://www.getillustrations.com/photos/pack/3d-avatar-male_lg.png"
+          /></div><div><ProfileCard
+          name="cat"
+          img ="https://png.pngtree.com/png-clipart/20190520/original/pngtree-melancholy-cat-hand-drawn-avatar-design-paintedcatavatarpretty-cat-png-image_4078730.jpg"
+        /></div>
+        <div><ProfileCard 
+          name="John Appleseed"
+          img="https://www.getillustrations.com/photos/pack/3d-avatar-male_lg.png"
+        /></div>
         </div>
 
         <div className='student'>
@@ -91,20 +116,48 @@ const Home = () => {
         </div>
 
         <div className='team-hold-multi'>
-          <div><ProfileCard /></div>
-          <div><ProfileCard /></div>
-          <div><ProfileCard /></div>
-          <div><ProfileCard /></div>
+          <div><ProfileCard
+            name="cat"
+            img ="https://png.pngtree.com/png-clipart/20190520/original/pngtree-melancholy-cat-hand-drawn-avatar-design-paintedcatavatarpretty-cat-png-image_4078730.jpg"
+          /></div>
+          <div><ProfileCard 
+            name="John Appleseed"
+            img="https://www.getillustrations.com/photos/pack/3d-avatar-male_lg.png"
+          /></div>
+          <div><ProfileCard
+            name="cat"
+            img ="https://png.pngtree.com/png-clipart/20190520/original/pngtree-melancholy-cat-hand-drawn-avatar-design-paintedcatavatarpretty-cat-png-image_4078730.jpg"
+          /></div>
+          <div><ProfileCard 
+            name="John Appleseed"
+            img="https://www.getillustrations.com/photos/pack/3d-avatar-male_lg.png"
+          /></div>
         </div>
       </div>
       <hr className="carouselrule" />
       <div className='equipments'>
         <div className='equipment-heading'><h3 id='equipment-head'>We have</h3></div>
         <div className='equipment-holder'>
-          <FacilitiesCard />
-          <FacilitiesCard />
-          <FacilitiesCard />
-          <FacilitiesCard />
+          <FacilitiesCard 
+            title = "3D Printer"
+            img = "https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
+            des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
+          />
+          <FacilitiesCard 
+            title = "3D Printer"
+            img = "https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
+            des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
+          />
+          <FacilitiesCard 
+            title = "3D Printer"
+            img = "https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
+            des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
+          />
+          <FacilitiesCard 
+            title = "3D Printer"
+            img = "https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
+            des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
+          />
         </div>
 
       </div>

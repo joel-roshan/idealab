@@ -1,24 +1,23 @@
 import React, { Component } from 'react'
 import './EventCard.css'
 
-export class EventCard extends Component {
-    render() {
+function EventCard (props1) {
         return (
             <div>
                 <div className='event-Holder' data-tilt data-tilt-scale="1.1" >
                     <div className='event-thumbnail'>
-                        <img id = "event-thumbnail-image"src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU'/>                        
+                        <img id = "event-thumbnail-image"src={props1.img}/>                        
                     </div>
                     <div className='date'>
-                        <p id='event-posted'>04/03/2022</p>
+                        <p id='event-posted'>{props1.date}</p>
                     </div>
                     <div className='description'>
-                        <p id='event-desc'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.....</p>
+                        <p id='event-desc'>{props1.des}</p>
                     </div>
                 </div>
             </div>
         )
     }
-}
+
 
 export default EventCard
