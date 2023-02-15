@@ -1,0 +1,6 @@
+.team-hold-multi-inside {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    justify-content: center;
+}

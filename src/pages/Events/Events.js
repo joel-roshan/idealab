@@ -16,7 +16,7 @@ const Events = () => {
         </div>
         <div className="main-event">
           <Eventcardinside
-            title="Event1"
+            title="Event"
             status='ongoing'
             pic={pic1}
             date="19-01-2003"
