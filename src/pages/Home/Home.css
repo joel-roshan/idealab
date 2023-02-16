@@ -250,9 +250,26 @@ a {
     background-color: gainsboro;
 }
 
-.event-hold-multi {
+#filler {
+    width: 20vw;
+}
+
+#event-wrapper {
+    position: relative;
+    left: -5vw;
+    width: 100vw;
+    overflow-x: scroll;
+    overflow-y: auto;
+    
+}
+
+#event-hold-multi {
     display: flex;
-    overflow-x: auto;
+    width: fit-content;
+    overflow-x: scroll;
+    overflow-y: auto;
+    height: 70vh;
+
 }
 
 .team {

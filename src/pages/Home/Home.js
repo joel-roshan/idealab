@@ -11,11 +11,15 @@ import ProfileCard from '../../components/ProfileCard';
 import FacilitiesCard from '../../components/FacilitiesCard';
 
 
+
+
+
+
 export function AddLibrary(urlOfTheLibrary) {
-    const script = document.createElement('script');
-    script.src = urlOfTheLibrary;
-    script.async = true;
-    document.body.appendChild(script);
+  const script = document.createElement('script');
+  script.src = urlOfTheLibrary;
+  script.async = true;
+  document.body.appendChild(script);
 }
 export function Addscript(urlOfTheLibrary) {
   if (window.innerWidth > 720) {
@@ -60,29 +64,53 @@ const Home = () => {
       <hr className="carouselrule" />
       <div className='event'>
         <div className='event-head'>
-          <h2 id="event-txt-head">Events</h2><span id='ticket'>🎟️</span>
+          <h2 id="event-txt-head">Events</h2>
         </div>
-        <div className='event-hold-multi'>
-          <div><EventCard 
-            date ="22-12-2222"
-            img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
-            des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
+        <section id='event-wrapper'>
+        <div id='event-hold-multi'>
+          <div id='filler'></div>
+          <div><EventCard
+            date="22-12-2222"
+            img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
+            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
           /></div>
-         <div><EventCard 
-            date ="22-12-2222"
-            img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
-            des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
-          /></div><div><EventCard 
-          date ="22-12-2222"
-          img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
-          des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
-        /></div><div><EventCard 
-        date ="22-12-2222"
-        img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
-        des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
-      /></div>
+          <div><EventCard
+            date="22-12-2222"
+            img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
+            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
+          /></div><div><EventCard
+            date="22-12-2222"
+            img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
+            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
+          /></div><div><EventCard
+            date="22-12-2222"
+            img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
+            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
+          /></div>
+          <div><EventCard
+            date="22-12-2222"
+            img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
+            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
+          /></div>
+          <div><EventCard
+            date="22-12-2222"
+            img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
+            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
+          /></div>
+          <div><EventCard
+            date="22-12-2222"
+            img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
+            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
+          /></div>
+          <div><EventCard
+            date="22-12-2222"
+            img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
+            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
+          /></div>
         </div>
+        </section>
       </div>
+      
       <hr className="carouselrule" />
       <div className='team'>
         <div className='team-head'>
@@ -94,21 +122,21 @@ const Home = () => {
         </div>
 
         <div className='team-hold-multi'>
-        <div><ProfileCard
+          <div><ProfileCard
             name="cat"
-            img ="https://png.pngtree.com/png-clipart/20190520/original/pngtree-melancholy-cat-hand-drawn-avatar-design-paintedcatavatarpretty-cat-png-image_4078730.jpg"
+            img="https://png.pngtree.com/png-clipart/20190520/original/pngtree-melancholy-cat-hand-drawn-avatar-design-paintedcatavatarpretty-cat-png-image_4078730.jpg"
           /></div>
-          <div><ProfileCard 
+          <div><ProfileCard
             name="John Appleseed"
             img="https://www.getillustrations.com/photos/pack/3d-avatar-male_lg.png"
           /></div><div><ProfileCard
-          name="cat"
-          img ="https://png.pngtree.com/png-clipart/20190520/original/pngtree-melancholy-cat-hand-drawn-avatar-design-paintedcatavatarpretty-cat-png-image_4078730.jpg"
-        /></div>
-        <div><ProfileCard 
-          name="John Appleseed"
-          img="https://www.getillustrations.com/photos/pack/3d-avatar-male_lg.png"
-        /></div>
+            name="cat"
+            img="https://png.pngtree.com/png-clipart/20190520/original/pngtree-melancholy-cat-hand-drawn-avatar-design-paintedcatavatarpretty-cat-png-image_4078730.jpg"
+          /></div>
+          <div><ProfileCard
+            name="John Appleseed"
+            img="https://www.getillustrations.com/photos/pack/3d-avatar-male_lg.png"
+          /></div>
         </div>
 
         <div className='student'>
@@ -118,17 +146,17 @@ const Home = () => {
         <div className='team-hold-multi'>
           <div><ProfileCard
             name="cat"
-            img ="https://png.pngtree.com/png-clipart/20190520/original/pngtree-melancholy-cat-hand-drawn-avatar-design-paintedcatavatarpretty-cat-png-image_4078730.jpg"
+            img="https://png.pngtree.com/png-clipart/20190520/original/pngtree-melancholy-cat-hand-drawn-avatar-design-paintedcatavatarpretty-cat-png-image_4078730.jpg"
           /></div>
-          <div><ProfileCard 
+          <div><ProfileCard
             name="John Appleseed"
             img="https://www.getillustrations.com/photos/pack/3d-avatar-male_lg.png"
           /></div>
           <div><ProfileCard
             name="cat"
-            img ="https://png.pngtree.com/png-clipart/20190520/original/pngtree-melancholy-cat-hand-drawn-avatar-design-paintedcatavatarpretty-cat-png-image_4078730.jpg"
+            img="https://png.pngtree.com/png-clipart/20190520/original/pngtree-melancholy-cat-hand-drawn-avatar-design-paintedcatavatarpretty-cat-png-image_4078730.jpg"
           /></div>
-          <div><ProfileCard 
+          <div><ProfileCard
             name="John Appleseed"
             img="https://www.getillustrations.com/photos/pack/3d-avatar-male_lg.png"
           /></div>
@@ -138,25 +166,25 @@ const Home = () => {
       <div className='equipments'>
         <div className='equipment-heading'><h3 id='equipment-head'>We have</h3></div>
         <div className='equipment-holder'>
-          <FacilitiesCard 
-            title = "3D Printer"
-            img = "https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
-            des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
+          <FacilitiesCard
+            title="3D Printer"
+            img="https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
+            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
           />
-          <FacilitiesCard 
-            title = "3D Printer"
-            img = "https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
-            des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
+          <FacilitiesCard
+            title="3D Printer"
+            img="https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
+            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
           />
-          <FacilitiesCard 
-            title = "3D Printer"
-            img = "https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
-            des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
+          <FacilitiesCard
+            title="3D Printer"
+            img="https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
+            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
           />
-          <FacilitiesCard 
-            title = "3D Printer"
-            img = "https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
-            des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
+          <FacilitiesCard
+            title="3D Printer"
+            img="https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
+            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
           />
         </div>
 
@@ -251,8 +279,10 @@ const Home = () => {
       </div>
       {Addscript(
         './tilt.js')}
-        {AddLibrary(
+      {AddLibrary(
         './scrollbar.js')}
+        {AddLibrary(
+        './scroll.js')}
 
     </div>
   )
