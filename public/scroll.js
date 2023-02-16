@@ -1,11 +1,10 @@
 var Eventbar = document.getElementById('event-hold-multi')
-var wrapper = document.querySelector("section")
 var moveval = 0;
 
 var dragging = false, mouselocation, gallerylocation;
 
 function animationforscroll() {
-    moveval = window.scrollY*0.003
+    moveval = window.scrollY*0.009
   Eventbar.style.transform = `rotateZ(-0.6deg) translateX(-${moveval}%)`;
   requestAnimationFrame(animationforscroll)
 }
