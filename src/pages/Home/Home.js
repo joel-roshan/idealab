@@ -9,6 +9,8 @@ import pic4 from "../../asset/pic4.jpg"
 import EventCard from '../../components/EventCard';
 import ProfileCard from '../../components/ProfileCard';
 import FacilitiesCard from '../../components/FacilitiesCard';
+import Footer from '../../components/Footer'
+
 
 
 
@@ -221,6 +223,9 @@ const Home = () => {
 
   </div></div>
 </div>
+<hr className="carouselrule" />
+<Footer/>
+
       {Addscript(
         './tilt.js')}
       {AddLibrary(
