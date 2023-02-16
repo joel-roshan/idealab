@@ -2,10 +2,16 @@
     display: flex;
     justify-content: space-between;
     padding: 30px;
+    width: 95vw;
+
 }
 #base {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+#whole-foot {
+    background-color: white;
+    
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../../components/Header'
 import ProfileCard from '../../components/ProfileCard'
 import './Team.css'
+import Footer from '../../components/Footer'
 
 
 const Team = () => {
@@ -58,6 +59,8 @@ const Team = () => {
           /></div>
         </div>
       </div>
+      <hr className="carouselrule" />
+      <Footer />
     </div>
   )
 }

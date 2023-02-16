@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
-        <div>
+        <div id='whole-foot'>
             <section id='footer'>
                 <div id='logo'>
                     <img src={logo}></img>

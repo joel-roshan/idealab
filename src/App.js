@@ -10,7 +10,6 @@ import Contact from './pages/Contact/Contact';
 import { Credits } from './pages/Credit/Credits';
 
 
-
 function App() {
   return (
     <div id='container'>
@@ -21,7 +20,7 @@ function App() {
         <Route path='/facilities' element = {<Facilities />} />
         <Route path='/events' element = {<Events />} />
         <Route path='/team' element = {<Team />} />
-        <Route path='/contact' element = {<Contact />} />
+        <Route path='/contact' element = {<Contact/>} />
         <Route path='/credit' element = {<Credits />} />
       </Routes>
     </div>

@@ -2,6 +2,7 @@
     background-color: #111;
     min-height: 100vh;
     height: fit-content;
+    padding-bottom: 70px;
 }
 .heading {
     width: 100%;

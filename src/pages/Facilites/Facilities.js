@@ -2,9 +2,11 @@ import React from 'react'
 import FacilitiesCard from '../../components/FacilitiesCard'
 import Header from '../../components/Header'
 import './Facilities.css'
+import Footer from '../../components/Footer'
 
 const Facilities = () => {
   return (
+    <div>
     <div id='facilities-body'>
         <Header />
         <div className='heading'>
@@ -40,6 +42,10 @@ const Facilities = () => {
         <FacilitiesCard/>
 
         </div>
+
+    </div>
+    <hr className="carouselrule" />
+        <Footer />
     </div>
   )
 }
