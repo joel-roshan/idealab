@@ -1,5 +1,4 @@
 var Eventbar = document.getElementById('event-hold-multi')
-var wrapper = document.querySelector("section")
 var moveval = 0;
 
 var dragging = false, mouselocation, gallerylocation;

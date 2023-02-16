@@ -7,8 +7,8 @@ Navbar {
 }
 
 body {
+    width: 100%;
     font-family: "Roboto Mono";
-    scroll-behavior: auto;
 }
 
 
@@ -18,13 +18,14 @@ body {
     top: 0;
     right: 0;
     width: 3px;
-    background: linear-gradient(45deg,rgb(35, 88, 173) 30%, rgb(55, 200, 195) 60%,rgb(35, 88, 173) );
+    background: linear-gradient(45deg, rgb(35, 88, 173) 30%, rgb(55, 200, 195) 60%, rgb(35, 88, 173));
     height: 100%;
     z-index: 10000;
     animation: scrollmove 10s infinite linear;
     background-position: 200% auto;
-    
+
 }
+
 #progressBar::before {
     content: '';
     position: absolute;
@@ -32,9 +33,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg,rgb(35, 88, 173) 30%, rgb(55, 200, 195) 60%,rgb(35, 88, 173) );
+    background: linear-gradient(45deg, rgb(35, 88, 173) 30%, rgb(55, 200, 195) 60%, rgb(35, 88, 173));
     filter: blur(10px);
 }
+
 #progressBar::after {
     content: '';
     position: absolute;
@@ -42,7 +44,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg,rgb(35, 88, 173) 30%, rgb(55, 200, 195) 60%,rgb(35, 88, 173) );
+    background: linear-gradient(45deg, rgb(35, 88, 173) 30%, rgb(55, 200, 195) 60%, rgb(35, 88, 173));
     filter: blur(20px);
 }
 
@@ -60,7 +62,7 @@ body {
 .carousel {
     display: grid;
     grid-template-columns: 20% 20% 20%;
-    grid-template-rows: 25% 25% 25% ;
+    grid-template-rows: 25% 25% 25%;
     gap: 10px;
 }
 
@@ -123,6 +125,7 @@ a {
     transition: 0.25s ease-in-out;
     animation: gradientmove 3s infinite linear;
 }
+
 .carouselrule::before {
     content: "";
     height: 3px;
@@ -136,6 +139,7 @@ a {
     filter: blur(20px);
     transform: translateY(-5px);
 }
+
 .carouselrule::after {
     content: "";
     height: 3px;
@@ -173,7 +177,8 @@ a {
     height: 100%;
 
 }
-#ticket{
+
+#ticket {
     margin: 10px;
     background-color: aliceblue;
     font-size: 60px;
@@ -183,16 +188,43 @@ a {
     border-radius: 80px;
     animation: wave-animation 3s infinite;
 }
+
 @keyframes wave-animation {
-    0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-  100% { transform: rotate( 0.0deg) }
+    0% {
+        transform: rotate(0.0deg)
+    }
+
+    10% {
+        transform: rotate(14.0deg)
+    }
+
+    /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+        transform: rotate(-8.0deg)
+    }
+
+    30% {
+        transform: rotate(14.0deg)
+    }
+
+    40% {
+        transform: rotate(-4.0deg)
+    }
+
+    50% {
+        transform: rotate(10.0deg)
+    }
+
+    60% {
+        transform: rotate(0.0deg)
+    }
+
+    /* Reset for the last half to pause */
+    100% {
+        transform: rotate(0.0deg)
+    }
 }
+
 @keyframes gradientmove {
     to {
         background-position: -200% center;
@@ -217,6 +249,7 @@ a {
     width: 30vw;
     color: white;
 }
+
 .about-txt-hold {
 
     margin-left: 10vw;
@@ -260,7 +293,7 @@ a {
     width: 100vw;
     overflow-x: scroll;
     overflow-y: auto;
-    
+
 }
 
 #event-hold-multi {
@@ -294,15 +327,20 @@ a {
     transition: 0.25s ease-in-out;
     animation: gradientmove 3s infinite linear;
 }
+
 @keyframes scrollmove {
-    0%,100% {
+
+    0%,
+    100% {
         filter: hue-rotate(0deg);
     }
+
     50% {
         filter: hue-rotate(360deg);
     }
-    
+
 }
+
 .faculties {
     display: flex;
     justify-content: right;
@@ -379,143 +417,28 @@ a {
 }
 
 .grid {
-    background: #111;
-    margin-top: 0px;
-    border-radius: 7px;
-    width: 100%;
-    height: fit-content;
+    background-color: #111;
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    justify-content: center;
     align-items: center;
-}
-
-.grid-block {
-    width: 50%;
-    min-height: 11.25rem;
-    margin: 8px;
-    flex: 25%;
-    max-width: 28%;
+    height: fit-content;
     padding: 20px;
-
 }
-
-.image-grid-holder {
+#gallery-head {
+    color: white;
+}
+#gallery {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    justify-content: center;
+    column-gap: 15px;
+    row-gap: 15px;
 }
 
-.image-grid {
-    -webkit-perspective: 1000px;
-    perspective: 1000px;
-    margin-top: 8px;
-    vertical-align: middle;
-}
 
-.image-grid .tile-link:hover .tile-img {
-    top: -1rem;
-    left: -1rem;
-}
 
-.image-grid .tile-img {
-    position: relative;
-    top: 0;
-    left: 0;
-    -webkit-transition-property: opacity, top, left, box-shadow;
-    transition-property: opacity, top, left, box-shadow;
-}
-
-.tile-link {
-    display: block;
-}
-
-.tile-link:hover .tile-img {
-    opacity: 1;
-}
-
-.tile-link:hover .tile-img-link {
-    display: block;
-}
-
-.tile-link:hover .tile-img-link:hover .tile-img {
-    opacity: 0.5;
-}
-
-.tile-img {
-    display: block;
-    width: 384px;
-    height: 216px;
-    object-fit: cover;
-    opacity: 1;
-    -webkit-transition-property: opacity;
-    transition-property: opacity;
-    -webkit-transition-duration: 0.125s;
-    transition-duration: 0.125s;
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
-}
-
-.tile-link:hover .tile-img1 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    box-shadow: 5px 5px rgba(244, 170, 200, 0.4),
-        10px 10px rgba(244, 170, 200, 0.3), 15px 15px rgba(244, 170, 200, 0.2),
-        20px 20px rgba(244, 170, 200, 0.1), 25px 25px rgba(244, 170, 200, 0.05);
-}
-
-.tile-link:hover .tile-img2 {
-    box-shadow: 5px 5px rgba(45, 186, 233, 0.4), 10px 10px rgba(45, 186, 233, 0.3),
-        15px 15px rgba(45, 186, 233, 0.2), 20px 20px rgba(45, 186, 233, 0.1),
-        25px 25px rgba(45, 186, 233, 0.05);
-}
-
-.tile-link:hover .tile-img3 {
-    box-shadow: 5px 5px rgba(214, 221, 244, 0.4),
-        10px 10px rgba(214, 221, 244, 0.3), 15px 15px rgba(214, 221, 244, 0.2),
-        20px 20px rgba(214, 221, 244, 0.1), 25px 25px rgba(214, 221, 244, 0.05);
-}
-
-.tile-link:hover .tile-img4 {
-    box-shadow: 5px 5px rgba(82, 119, 192, 0.4), 10px 10px rgba(82, 119, 192, 0.3),
-        15px 15px rgba(82, 119, 192, 0.2), 20px 20px rgba(82, 119, 192, 0.1),
-        25px 25px rgba(82, 119, 192, 0.05);
-}
-
-.tile-link:hover .tile-img5 {
-    box-shadow: 5px 5px rgba(138, 218, 245, 0.4),
-        10px 10px rgba(138, 218, 245, 0.3), 15px 15px rgba(138, 218, 245, 0.2),
-        20px 20px rgba(138, 218, 245, 0.1), 25px 25px rgba(138, 218, 245, 0.05);
-}
-
-.tile-link:hover .tile-img6 {
-    box-shadow: 5px 5px rgba(203, 215, 193, 0.4),
-        10px 10px rgba(203, 215, 193, 0.3), 15px 15px rgba(203, 215, 193, 0.2),
-        20px 20px rgba(203, 215, 193, 0.1), 25px 25px rgba(203, 215, 193, 0.05);
-}
-
-.tile-link:hover .tile-img7 {
-    box-shadow: 5px 5px rgba(91, 209, 250, 0.4), 10px 10px rgba(91, 209, 250, 0.3),
-        15px 15px rgba(91, 209, 250, 0.2), 20px 20px rgba(91, 209, 250, 0.1),
-        25px 25px rgba(91, 209, 250, 0.05);
-}
-
-.tile-link:hover .tile-img8 {
-    box-shadow: 5px 5px rgba(145, 156, 196, 0.4),
-        10px 10px rgba(145, 156, 196, 0.3), 15px 15px rgba(145, 156, 196, 0.2),
-        20px 20px rgba(145, 156, 196, 0.1), 25px 25px rgba(145, 156, 196, 0.05);
-}
-
-.tile-link:hover .tile-img9 {
-    box-shadow: 5px 5px rgba(188, 97, 129, 0.4), 10px 10px rgba(188, 97, 129, 0.3),
-        15px 15px rgba(188, 97, 129, 0.2), 20px 20px rgba(188, 97, 129, 0.1),
-        25px 25px rgba(188, 97, 129, 0.05);
-}
-
-.tile-link:hover .tile-img10 {
-    box-shadow: 5px 5px rgba(4, 140, 231, 0.4), 10px 10px rgba(4, 140, 231, 0.3),
-        15px 15px rgba(4, 140, 231, 0.2), 20px 20px rgba(4, 140, 231, 0.1),
-        25px 25px rgba(4, 140, 231, 0.05);
-}
 
 @media (max-width:1000px) {
     body {
@@ -612,29 +535,13 @@ a {
 }
 
 @media (max-width: 1313px) {
+    body {
+        width: 100%;
+    }
     .grid {
         display: flex;
-        flex-wrap: nowrap;
-        width: 100%;
-        justify-content: start;
-    }
-
-    .image-grid-holder {
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: start;
-        justify-content: start;
-        overflow-x: scroll;
-    }
-
-    .grid-block {
-        display: flex;
-        flex-direction: row;
-        flex: 50%;
-        max-width: 50%;
-        padding: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
 }
@@ -646,26 +553,8 @@ a {
 
     .grid {
         display: flex;
-        flex-wrap: nowrap;
-        justify-content: start;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .grid-block {
-        display: flex;
-        flex-direction: row;
-        flex: 100%;
-        max-width: 100%;
-        margin: 30px;
-        padding: 80px;
-    }
-
-    .image-grid-holder {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: start;
-        justify-content: start;
-        overflow-x: scroll;
-    }
 }
