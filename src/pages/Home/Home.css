@@ -59,7 +59,7 @@ body {
 }
 
 .carousel {
-    width: 95vw;
+    width: 85vw;
     display: grid;
     grid-template-columns: 20% 20% 20%;
     grid-template-rows: 25% 25% 25%;
@@ -70,7 +70,9 @@ body {
     display: block;
     margin-top: 20vh;
     margin-bottom: auto;
-    grid-column: 6;
+    grid-column: 7;
+    position: relative;
+    right: -50px;
     grid-row: 1;
     height: fit-content;
     transform-style: preserve-3d;
@@ -288,6 +290,7 @@ a {
 }
 
 #event-wrapper {
+    opacity: 0;
     position: relative;
     left: -5vw;
     width: 100vw;

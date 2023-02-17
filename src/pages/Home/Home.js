@@ -10,7 +10,8 @@ import EventCard from '../../components/EventCard';
 import ProfileCard from '../../components/ProfileCard';
 import FacilitiesCard from '../../components/FacilitiesCard';
 import Footer from '../../components/Footer'
-
+import { useRef, useEffect } from 'react';
+import { gsap } from "gsap";
 
 
 
@@ -30,6 +31,39 @@ export function Addscript(urlOfTheLibrary) {
   }
 }
 const Home = () => {
+  const circleRef = useRef(null);
+  useEffect(() => {
+    gsap.to("#event-wrapper", {
+      opacity: 1,
+      duration: 3,
+      delay: 1,
+      ease: "bounce",
+      scrollTrigger: {
+        trigger: "#event-wrapper"
+      }
+    });
+
+    gsap.to(".profile-Holder", {
+      opacity: 1,
+      scale: 1,
+      duration: 3,
+      delay: 1,
+      ease: "bounce",
+      scrollTrigger: {
+        trigger: ".profile-Holder"
+      }
+    });
+    gsap.to("#event-wrapper", {
+      opacity: 1,
+      duration: 3,
+      delay: 1,
+      ease: "bounce",
+      scrollTrigger: {
+        trigger: "#event-wrapper"
+      }
+    });
+
+  }, []);
   return (
     <div id='homebody'>
       <Header />

@@ -140,7 +140,7 @@ img
     }
     .event-card:hover
     {
-        height: 450px;
+        height: min-content;
     }
     .imgholder
     {

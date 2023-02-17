@@ -16,8 +16,8 @@ const Footer = () => {
                         Model Engineering College<br />
                         Thrikkakara, Kochi<br />
                         Kerala, PIN: 682021<br />
-                        Contact: hodcs@mec.ac.in<br />
-                        Phone: 0484 2307127</p>
+                        Contact:<a href='mailto:hodcs@mec.ac.in' id ='mail'>hodcs@mec.ac.in</a><br />
+                        Phone:<a href ='tel:04842307127' id='mail'>0484 2307127</a></p>
                 </div>
             </section>
             <div id='base'><p id='footer-parag'>Managed by Institute of Human Resource Development</p>

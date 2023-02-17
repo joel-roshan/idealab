@@ -2,11 +2,14 @@
     display: flex;
     justify-content: space-between;
     padding: 30px;
-    width: 95vw;
+    width: auto;
 
 }
 #footer-parag{
     margin: 20px;
+}
+#mail {
+    color: blue;
 }
 #base {
     display: flex;
