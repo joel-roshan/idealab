@@ -222,6 +222,42 @@ const Home = () => {
   </div></div>
 </div>
 <hr className="carouselrule" />
+<div id='c' className="contactuss">
+  <div className="mainbox">
+    <p>
+      Name of Contact
+    </p>
+    <p>
+      Designation of Contact
+    </p>
+    <p>
+      Phone no of Contact
+    </p>
+  </div>
+  <div className="mainbox">
+    <p>
+      Name of Contact
+    </p>
+    <p>
+      Designation of Contact
+    </p>
+    <p>
+      Phone no of Contact
+    </p>
+  </div>
+  <div className="mainbox">
+    <p>
+      Name of Contact
+    </p>
+    <p>
+      Designation of Contact
+    </p>
+    <p>
+      Phone no of Contact
+    </p>
+  </div>
+</div>
+<hr className="carouselrule" />
 <Footer/>
 
       {Addscript(
