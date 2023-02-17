@@ -4,12 +4,14 @@ import Header from '../../components/Header'
 import './Events.css'
 import pic1 from "../../asset/pic1.jpg"
 import poster from "../../asset/poster.jpeg";
+import Footer from '../../components/Footer'
 
  
 
 
 const Events = () => {
   return (
+    <div>
     <div id='event-body'>
         <Header />
         <div className='heading'>
@@ -34,6 +36,11 @@ const Events = () => {
           <Eventcardinside />
           <Eventcardinside />
         </div>
+        <div id = "fillerfor"></div>
+
+    </div>
+    <hr className="carouselrule" />
+        <Footer />
     </div>
   )
 }

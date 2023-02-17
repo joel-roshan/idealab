@@ -13,7 +13,6 @@
     box-shadow: 5px 5px 4px #888888;
     transform-style: preserve-3d;
     transform: perspective(1000px);
-    cursor: grab;
 }
 #event-thumbnail-image {
     width: 100%;

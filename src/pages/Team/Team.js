@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../../components/Header'
 import ProfileCard from '../../components/ProfileCard'
 import './Team.css'
+import Footer from '../../components/Footer'
 
 
 const Team = () => {
@@ -14,7 +15,7 @@ const Team = () => {
         </div>
 
         <div className='faculties'>
-          <h3 id='faculties-txt'>Faculties</h3>
+          <h3 id='team-sub-head'>Faculties</h3>
         </div>
 
         <div className='team-hold-multi-inside'>
@@ -35,11 +36,11 @@ const Team = () => {
         /></div>
         </div>
 
-        <div className='student'>
-          <h3 id='student-txt'>Student in charges</h3>
+        <div className='student '>
+          <h3 id='team-sub-head'>Student in charges</h3>
         </div>
 
-        <div className='team-hold-multi'>
+        <div className='team-hold-multi team-hold-multi-inside'>
           <div><ProfileCard
             name="cat"
             img ="https://png.pngtree.com/png-clipart/20190520/original/pngtree-melancholy-cat-hand-drawn-avatar-design-paintedcatavatarpretty-cat-png-image_4078730.jpg"
@@ -58,6 +59,8 @@ const Team = () => {
           /></div>
         </div>
       </div>
+      <hr className="carouselrule" />
+      <Footer />
     </div>
   )
 }

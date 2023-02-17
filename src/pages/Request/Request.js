@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../../components/Header'
 import './Request.css'
+import Footer from '../../components/Footer'
 
 const Request = () => {
   return (
@@ -48,6 +49,8 @@ const Request = () => {
           {/* <button className='btnsub'>Submit</button> */}
         </div>
       </div>
+      <hr className="carouselrule" />
+      <Footer />
     </div>
   )
 }

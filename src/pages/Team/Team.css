@@ -1,6 +1,11 @@
 .team-hold-multi-inside {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+}
+#team-sub-head {
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
