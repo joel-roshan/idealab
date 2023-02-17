@@ -19,7 +19,7 @@ const Events = () => {
         </div>
         <div className="main-event">
           <Eventcardinside
-            title="Event"
+            title="Pre Marriage Counselling"
             status='ongoing'
             pic={poster}
             date="19-01-2003"

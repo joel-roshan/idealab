@@ -15,8 +15,8 @@ function Eventcardinside (props) {
       <div className="title-btn">
         <div className="title">
         <h3 id='title-text'>
-          {/* {props.title} */}
-          Pre Marraige Counselling
+          {props.title}
+          
         </h3>
         </div>
         
