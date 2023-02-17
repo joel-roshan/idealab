@@ -1,5 +1,5 @@
 #event-body {
-    background-color: #111;
+    background-color: grey;
     min-height: 100vh;
     height: fit-content;
 }
@@ -75,6 +75,7 @@ img
     background-color: black;
     border-radius: 7px;
     /* width: 100px; */
+    display: none;
 }
 .more-btn
 {
@@ -119,6 +120,11 @@ img
 }
 @media (max-width:600px)
 {
+    .main-event
+    {
+        gap: 70px;
+    }
+    
     .event-card
     {
         display: flex;
@@ -126,11 +132,23 @@ img
         align-items: center;
         width: 85vw;
         padding-top: 0;
+        position: relative;
+        height: 400px;
+        margin-top: 30px;
+        transition: 0.3s;
+    }
+    .event-card:hover
+    {
+        height: 450px;
     }
     .imgholder
     {
         margin: 0px;
         padding: 0px;
+        transform: translateY(-60px);
+        position: relative;
+        width: 100%;
+        height: 100%;
     }
     
     /* .event-info
@@ -143,6 +161,7 @@ img
         height:auto;
         margin-top: 0px;        
         margin: 0px;
+       
 
         
     }
@@ -151,8 +170,17 @@ img
         
         margin:0px;
         padding: 0px;
-        
+        position: relative;
+        transform: translateY(-300px);
+        opacity: 0;
+        transition: 0.3s;
     }
+    .event-card:hover > .event-info
+    {
+        opacity: 1;
+        transform: translateY(-60px);
+    }
+    
    
     }
     /* .title-btn

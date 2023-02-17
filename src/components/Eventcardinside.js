@@ -3,6 +3,7 @@ import { CiCalendarDate } from 'react-icons/ci';
 import { CiLocationOn } from 'react-icons/ci';
 import pic1 from "../asset/pic1.jpg"
 
+
 function Eventcardinside (props) {
  
     return (
@@ -14,7 +15,8 @@ function Eventcardinside (props) {
       <div className="title-btn">
         <div className="title">
         <h3 id='title-text'>
-          {props.title}
+          {/* {props.title} */}
+          Pre Marraige Counselling
         </h3>
         </div>
         
