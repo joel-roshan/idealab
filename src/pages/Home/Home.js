@@ -31,7 +31,7 @@ export function Addscript(urlOfTheLibrary) {
 }
 const Home = () => {
   return (
-    <div>
+    <div id='homebody'>
       <Header />
       <div id="progressBar"></div>
       <div className="carousel">

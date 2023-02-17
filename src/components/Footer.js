@@ -19,9 +19,10 @@ const Footer = () => {
                         Contact: hodcs@mec.ac.in<br />
                         Phone: 0484 2307127</p>
                 </div>
-            </section> 
-            <div id='base'><p>Managed by Institute of Human Resource Development | Established by Government of Kerala <br/>Copyright © {new Date().getFullYear()} | <Link to="/credit" className="navtext ">Credits</Link> </p></div>
-            </div>
+            </section>
+            <div id='base'><p id='footer-parag'>Managed by Institute of Human Resource Development</p>
+                <p id='footer-parag'>Established by Government of Kerala</p> <p id='footer-parag'>Copyright © {new Date().getFullYear()} <Link to="/credit" className="navtext ">Credits</Link></p></div>
+        </div>
     )
 }
 

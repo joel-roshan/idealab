@@ -7,7 +7,6 @@ Navbar {
 }
 
 body {
-    width: 100%;
     font-family: "Roboto Mono";
 }
 
@@ -60,6 +59,7 @@ body {
 }
 
 .carousel {
+    width: 95vw;
     display: grid;
     grid-template-columns: 20% 20% 20%;
     grid-template-rows: 25% 25% 25%;

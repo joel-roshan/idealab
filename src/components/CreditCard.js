@@ -3,7 +3,7 @@ import './CreditCard.css'
 
 const CreditCard = (data) => {
   return (
-    <div id='credit-card' data-tilt data-tilt-scale="1.1">
+    <div id='credit-card' data-tilt data-tilt-scale="1.1" data-tilt-glare data-tilt-max-glare="0.8">
         <img src={data.profile} id='creditpagephoto' alt='profile picture'/>
         <div></div>
         <h3>{data.name}</h3>
