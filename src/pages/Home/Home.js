@@ -36,7 +36,7 @@ const Home = () => {
     gsap.to("#event-wrapper", {
       opacity: 1,
       duration: 3,
-      delay: 1,
+      delay: 2,
       ease: "bounce",
       scrollTrigger: {
         trigger: "#event-wrapper"
@@ -45,10 +45,10 @@ const Home = () => {
 
     gsap.to(".profile-Holder", {
       opacity: 1,
-      scale: 1,
+      y: 0,
       duration: 3,
-      delay: 1,
-      ease: "bounce",
+      delay: 2,
+      ease: "linear",
       scrollTrigger: {
         trigger: ".profile-Holder"
       }
@@ -69,7 +69,7 @@ const Home = () => {
       <Header />
       <div id="progressBar"></div>
       <div className="carousel">
-        <div className="announcement" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+        <div className="announcement" >
           <h2 className="head-announce">From the lab</h2>
           <p className="announce">announcement 1</p>
           <p className="announce">announcement 2</p>

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     padding: 30px;
-    width: auto;
+    width:auto;
 
 }
 #footer-parag{
@@ -33,5 +33,6 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        
     }
 }

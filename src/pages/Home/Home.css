@@ -9,7 +9,9 @@ Navbar {
 body {
     font-family: "Roboto Mono";
 }
-
+ * {
+    border-radius: 5px;
+ }
 
 
 #progressBar {
@@ -180,16 +182,6 @@ a {
 
 }
 
-#ticket {
-    margin: 10px;
-    background-color: aliceblue;
-    font-size: 60px;
-    width: 80px;
-    text-align: center;
-    padding: 10px;
-    border-radius: 80px;
-    animation: wave-animation 3s infinite;
-}
 
 @keyframes wave-animation {
     0% {
@@ -282,7 +274,10 @@ a {
 
 .event {
     padding: 5vw;
-    background-color: gainsboro;
+    background: linear-gradient(120deg,rgb(35, 88, 173) 30%, rgb(55, 200, 195) 60%,rgb(35, 88, 173) );;
+    background-size: 200% auto;
+    animation: gradientmove 8s infinite linear;
+    backdrop-filter: blur(10px);
 }
 
 #filler {
@@ -377,8 +372,10 @@ a {
 }
 
 .equipments {
-    background-color: gainsboro;
+    background: linear-gradient(120deg,rgb(35, 88, 173) 30%, rgb(55, 200, 195) 60%,rgb(35, 88, 173) );;
     margin-bottom: 0px;
+    animation: gradientmove 8s infinite linear;
+    background-size: 200% auto;
 }
 
 .equipment-holder {
@@ -444,8 +441,12 @@ a {
     flex-direction: row;
     justify-content: center;
     width: auto;
-    
+    background-size: 200% auto;
+    background: linear-gradient(120deg,rgb(35, 88, 173) 30%, rgb(55, 200, 195) 60%,rgb(35, 88, 173) );;
     gap: 80px;
+    padding: 50px;
+    animation: gradientmove 8s infinite linear;
+    border-radius: 8px;
 }
 .mainbox
 {
