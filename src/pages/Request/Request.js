@@ -5,11 +5,11 @@ import Footer from '../../components/Footer'
 
 const Request = () => {
   return (
-    <div><Header />
+    <div id='request-page'><Header />
       <div className="container">
         <div className="message">
           <h2 >
-            Request access to an equipment 
+            Book an equipment 
           </h2>
           <p>
             Fill out these details
@@ -30,6 +30,10 @@ const Request = () => {
           </div> 
           <div className="box"> 
             <input className='input-box' type="text" placeholder='Class *' />
+          </div> 
+          <div className="box"> 
+            <label>Appoinment Date</label>
+            <input className='input-box' type="date" placeholder='Appoinment Date' />
           </div> 
           <div className="box"> 
             <select id='equipment' className='input-box'>

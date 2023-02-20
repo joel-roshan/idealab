@@ -9,6 +9,9 @@ const Footer = () => {
             <section id='footer'>
                 <div id='logo'>
                     <img src={logo}></img>
+                    <a href="https://cognicor.com" target="_blank">
+                    <img src="https://static.wixstatic.com/media/958eca_821d544f48f24288bd452d7badca64fa~mv2.png/v1/crop/x_0,y_12,w_1968,h_516/fill/w_456,h_120,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/logo-transparent-cognicor-horizontal.png" id='cognicor-logo' href="https://www.cognicor.com"/>
+                    </a>
                 </div>
                 <div id='row2'>
                     <h4>Contact Us</h4>

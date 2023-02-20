@@ -20,7 +20,7 @@ const Team = () => {
 
         <div className='team-hold-multi-inside'>
         <div><ProfileCard
-            name="cat"
+            name="Cat 1"
             img ="https://png.pngtree.com/png-clipart/20190520/original/pngtree-melancholy-cat-hand-drawn-avatar-design-paintedcatavatarpretty-cat-png-image_4078730.jpg"
           /></div>
           <div><ProfileCard 

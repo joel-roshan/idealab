@@ -35,9 +35,9 @@ const Home = () => {
   useEffect(() => {
     gsap.to("#event-wrapper", {
       opacity: 1,
-      duration: 3,
+      duration: 1,
       delay: 2,
-      ease: "bounce",
+      ease: "linear",
       scrollTrigger: {
         trigger: "#event-wrapper"
       }
@@ -53,15 +53,7 @@ const Home = () => {
         trigger: ".profile-Holder"
       }
     });
-    gsap.to("#event-wrapper", {
-      opacity: 1,
-      duration: 3,
-      delay: 1,
-      ease: "bounce",
-      scrollTrigger: {
-        trigger: "#event-wrapper"
-      }
-    });
+    
 
   }, []);
   return (

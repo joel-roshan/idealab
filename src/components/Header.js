@@ -12,7 +12,7 @@ const Header = () => {
     <div className="header">
 
       <div className="hello" > 
-        <p id="hello">IDEALab</p>
+        <a id="hello" href="/">IDEALab</a>
       </div>
       <a href="#" className="toggle-button" onClick={() => setShowMediaIcons(!showMediaIcons)}>
         <span className="bar"></span>
@@ -24,16 +24,16 @@ const Header = () => {
       }>
 
         <div className="home">
-          <Link to="/" className="navtext">Home</Link>
-          <Link to="/facilities" className="navtext ">Facilities</Link>
-          <Link to="/events" className="navtext ">Events</Link>
-          <Link to="/team" className="navtext ">Team</Link>
+          <Link to="/" className="navtext">home</Link>
+          <Link to="/facilities" className="navtext ">facilities</Link>
+          <Link to="/events" className="navtext ">events</Link>
+          <Link to="/team" className="navtext ">team</Link>
           
         </div>
 
         <div className="nav2">
           <div className="btnnav" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
-            <Link to='/request' className='access'>Request Access</Link>
+            <Link to='/request' className='access'>Book Facility</Link>
           </div>
 
           <div className="logocollege">

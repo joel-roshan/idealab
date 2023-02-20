@@ -24,7 +24,14 @@
     
 }
 #logo {
-    width: 100px;
+    width: fit-content;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cognicor-logo {
+    width: 200px;
     height: auto;
 }
 @media (max-width:800px) {
@@ -34,5 +41,8 @@
         align-items: center;
         text-align: center;
         
+    }
+    #logo{
+        width: 100px;
     }
 }
