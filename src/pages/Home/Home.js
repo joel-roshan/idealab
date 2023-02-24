@@ -38,8 +38,8 @@ const Home = () => {
     gsap.set("#event-hold-multi", { x: 0 });
     gsap.to("#event-hold-multi", {
       
-      x: -1500,
-      ease: "cubic.inOut",
+      x: -1390,
+      ease: "linear",
       scrollTrigger: {
         trigger: ".event",  // pin the trigger element while active
         start: "top 10px",
