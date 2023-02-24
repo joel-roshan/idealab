@@ -11,7 +11,8 @@ import ProfileCard from '../../components/ProfileCard';
 import FacilitiesCard from '../../components/FacilitiesCard';
 import Footer from '../../components/Footer'
 import { useRef, useEffect } from 'react';
-import { gsap } from "gsap";
+import gsap from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 
 
@@ -32,25 +33,21 @@ export function Addscript(urlOfTheLibrary) {
 }
 const Home = () => {
   const circleRef = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
-    gsap.to("#event-wrapper", {
-      opacity: 1,
-      duration: 1,
-      delay: 2,
-      ease: "linear",
+    gsap.set("#event-hold-multi", { x: 0 });
+    gsap.to("#event-hold-multi", {
+      
+      x: -1500,
+      ease: "cubic.inOut",
       scrollTrigger: {
-        trigger: "#event-wrapper"
-      }
-    });
-
-    gsap.to(".profile-Holder", {
-      opacity: 1,
-      y: 0,
-      duration: 3,
-      delay: 2,
-      ease: "linear",
-      scrollTrigger: {
-        trigger: ".profile-Holder"
+        trigger: ".event",  // pin the trigger element while active
+        start: "top 10px",
+        end: "bottom -10px",
+        // end after scrolling 500px beyond the start
+        pinnedContainer:".event",
+        pin:true, // end after scrolling 500px beyond the start
+        scrub: 1,
       }
     });
     
@@ -94,7 +91,6 @@ const Home = () => {
         </div>
         <section id='event-wrapper'>
           <div id='event-hold-multi'>
-            <div id='filler'></div>
             <div><EventCard
               date="22-12-2222"
               img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
@@ -129,7 +125,7 @@ const Home = () => {
               des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
             /></div>
             <div><EventCard
-              date="22-12-2222"
+              date="22-12-2222 last"
               img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
               des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
             /></div>
@@ -290,8 +286,6 @@ const Home = () => {
         './tilt.js')}
       {AddLibrary(
         './scrollbar.js')}
-      {AddLibrary(
-        './scroll.js')}
 
     </div>
   )
