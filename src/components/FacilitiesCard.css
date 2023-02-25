@@ -17,6 +17,7 @@
 }
 #facilities-thumbnail-image {
     width: 200px;
+    height: auto;
     border-radius: 3px;
     transform: translateZ(30px) 
 }

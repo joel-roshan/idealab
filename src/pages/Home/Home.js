@@ -38,7 +38,7 @@ const Home = () => {
     gsap.set("#event-hold-multi", { x: 0 });
     gsap.to("#event-hold-multi", {
       
-      x: -1390,
+      x: -1290,
       ease: "linear",
       scrollTrigger: {
         trigger: ".event",  // pin the trigger element while active
@@ -190,22 +190,22 @@ const Home = () => {
         <div className='equipment-holder'>
           <FacilitiesCard
             title="3D Printer"
-            img="https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
+            img="https://www.pngmart.com/files/21/3D-Printer-PNG-Picture.png"
             des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
           />
           <FacilitiesCard
             title="3D Printer"
-            img="https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
+            img="https://www.pngmart.com/files/21/3D-Printer-PNG-Picture.png"
             des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
           />
           <FacilitiesCard
             title="3D Printer"
-            img="https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
+            img="https://www.pngmart.com/files/21/3D-Printer-PNG-Picture.png"
             des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
           />
           <FacilitiesCard
             title="3D Printer"
-            img="https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
+            img="https://www.pngmart.com/files/21/3D-Printer-PNG-Picture.png"
             des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
           />
         </div>

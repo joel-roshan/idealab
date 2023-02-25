@@ -1,7 +1,9 @@
 import React from 'react'
 import Header from '../../components/Header'
 import './Request.css'
-import Footer from '../../components/Footer'
+import Footer from '../../components/Footer';
+
+
 
 const Request = () => {
   return (
@@ -33,7 +35,8 @@ const Request = () => {
           </div> 
           <div className="box"> 
             <label>Appoinment Date</label>
-            <input className='input-box' type="date" placeholder='Appoinment Date' />
+            
+            <input className='input-box' id='date-hold' type="date" placeholder='Appoinment Date' required = "True" />
           </div> 
           <div className="box"> 
             <select id='equipment' className='input-box'>
