@@ -313,6 +313,7 @@ const Home = () => {
           />
         </div>
 
+<<<<<<< HEAD
         <div id="myModal" class="modal fade" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -320,6 +321,15 @@ const Home = () => {
             </div>
           </div>
         </div>
+=======
+</div>
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modall-content">
+      <div class="modall-body">
+>>>>>>> 5fe7c6adb36d6fafde30a37b809a5469e2361a96
       </div>
       <hr className="carouselrule" />
       <div id="c" className="contactuss">
