@@ -41,8 +41,7 @@ const Home = () => {
         start: "top 10px",
         end: "bottom -10px",
         // end after scrolling 500px beyond the start
-        pinnedContainer: ".event",
-        pin: true, // end after scrolling 500px beyond the start
+        // end after scrolling 500px beyond the start
         scrub: 1,
       },
     });
@@ -312,24 +311,6 @@ const Home = () => {
             class="img-responsive"
           />
         </div>
-
-<<<<<<< HEAD
-        <div id="myModal" class="modal fade" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-body"></div>
-            </div>
-          </div>
-        </div>
-=======
-</div>
-
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <div class="modall-content">
-      <div class="modall-body">
->>>>>>> 5fe7c6adb36d6fafde30a37b809a5469e2361a96
       </div>
       <hr className="carouselrule" />
       <div id="c" className="contactuss">
