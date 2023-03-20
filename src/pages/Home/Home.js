@@ -236,8 +236,8 @@ const Home = () => {
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
-    <div class="modal-content">
-      <div class="modal-body">
+    <div class="modall-content">
+      <div class="modall-body">
       </div>
     </div>
 

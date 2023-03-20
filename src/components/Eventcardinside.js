@@ -2,12 +2,37 @@ import React from 'react'
 import { CiCalendarDate } from 'react-icons/ci';
 import { CiLocationOn } from 'react-icons/ci';
 import pic1 from "../asset/pic1.jpg"
+import  { useState } from "react";
+import { AiOutlineClose } from 'react-icons/ai';
+
 
 
 function Eventcardinside (props) {
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => {
+    setModal(!modal);
+  }
  
     return (
-    <div>          <div className="event-card">
+      
+    <div> 
+          {modal && (
+        <div className="modal">
+          <div onClick={toggleModal} className="overlay"></div>
+          <div className="modal-content">
+            <h2>{props.title}</h2>
+            <p>
+              {props.desc}
+            </p>
+            <button className="close-modal" onClick={toggleModal}>
+              X
+            </button>
+          </div>
+        </div>
+      )}
+      
+           <div className="event-card">
     <div className="imgholder">
       <img src={props.pic} alt="" />
     </div>
@@ -20,9 +45,7 @@ function Eventcardinside (props) {
         </h3>
         </div>
         
-        <div className="btn-info">
-          <button className="more-btn">More</button>
-        </div>
+        
       </div> 
       <div className="date-location">
         <div className="date">
@@ -43,11 +66,16 @@ function Eventcardinside (props) {
         <div className="time">
           <p>{props.time}</p>
         </div>
+        <div className="btn-info">
+          <button onClick={toggleModal} className="more-btn">more</button>
+        </div>
+      
         
       </div>
 
     </div> 
-  </div></div>
+  </div>
+  </div>
   )
 }
 
