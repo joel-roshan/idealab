@@ -6,6 +6,7 @@ import pic1 from "../asset/pic1.jpg";
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import TabButton from "../pages/Events/Tabs";
+import Contactsevents from "./Contactsevents";
 
 function Eventcardinside(props) {
   const [modal, setModal] = useState(false);
@@ -30,26 +31,26 @@ function Eventcardinside(props) {
                  IDEALab
                 </div>
                 <h2>{props.title}</h2>
-                {/* <p>{props.desc}</p> */}
+                
                 <div className="tabs-container">
                   <div className="bloc-tabs">
                     <button
                       className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
                       onClick={() => toggleTab(1)}
                     >
-                      Tab 1
+                      About
                     </button>
                     <button
                       className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
                       onClick={() => toggleTab(2)}
                     >
-                      Tab 2
+                      Registration
                     </button>
                     <button
                       className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
                       onClick={() => toggleTab(3)}
                     >
-                      Tab 3
+                      Contact
                     </button>
                   </div>
 
@@ -103,15 +104,22 @@ function Eventcardinside(props) {
                       className={toggleState === 3 ? "content  active-content" : "content"}
                     >
                       <h2>Contact</h2>
-                      <hr />
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sed
-                        nostrum rerum laudantium totam unde adipisci incidunt modi alias!
-                        Accusamus in quia odit aspernatur provident et ad vel distinctio
-                        recusandae totam quidem repudiandae omnis veritatis nostrum
-                        laboriosam architecto optio rem, dignissimos voluptatum beatae
-                        aperiam voluptatem atque. Beatae rerum dolores sunt.
-                      </p>
+                      <div className="contact-body">
+                        <Contactsevents
+                        phone="8590498682"
+                        name="john doe"
+                        position="Event Head"
+                        />
+                        <Contactsevents
+                        phone="8138816173"
+                        name="john doe"
+                        position="Event Head"
+                        />
+                      </div>
+                      
+
+                      
+
                     </div>
                   </div>
                 </div>

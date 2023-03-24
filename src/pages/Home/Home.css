@@ -64,6 +64,14 @@ body {
     display: flex;
     align-items: center;
 }
+.link-announce
+{
+    text-decoration: underline;
+    text-decoration-color: #0000EE ;
+    color: #0000EE ;
+    font-size: small;
+    padding-left: 20px;
+}
 
 .announcement {
     display: block;
@@ -81,7 +89,10 @@ body {
     border-width: 5px;
     z-index: 10;
     padding: 30px;
+    max-height: 350px;
+    overflow-y: scroll;
 }
+
 
 a {
     text-decoration: none;
@@ -106,6 +117,7 @@ a {
     border-radius: 2px;
     padding: 10px;
     transition: background 0.23s ease-in;
+    margin-bottom: 0px;
 }
 
 .announce:hover {

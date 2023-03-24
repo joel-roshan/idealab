@@ -13,6 +13,9 @@ import Footer from "../../components/Footer";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Announcements from "../../components/Announcements";
+
+
 
 export function AddLibrary(urlOfTheLibrary) {
   const script = document.createElement("script");
@@ -53,10 +56,40 @@ const Home = () => {
       <div className="carousel">
         <div className="announcement">
           <h2 className="head-announce">From the lab</h2>
-          <p className="announce">announcement 1</p>
+          <Announcements
+            announce="announcement 1"
+            linkannounce="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"
+            linkname="Link1"
+          />
+          <Announcements
+            announce="announcement 2"
+            linkannounce="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"
+            linkname="Link2"
+          />
+          <Announcements
+            announce="announcement 3"
+            linkannounce="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"
+            linkname="Link3"
+          />
+          <Announcements
+            announce="announcement 1"
+            linkannounce="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"
+            linkname="Link1"
+          />
+          <Announcements
+            announce="announcement 1"
+            linkannounce="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"
+            linkname="Link1"
+          />
+          <Announcements
+            announce="announcement 1"
+            linkannounce="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"
+            linkname="Link1"
+          />
+          {/* <p className="announce">announcement 1</p>
           <p className="announce">announcement 2</p>
           <p className="announce">announcement 3</p>
-          <p className="announce">announcement 4</p>
+          <p className="announce">announcement 4</p> */}
         </div>
 
         <div className="image">
