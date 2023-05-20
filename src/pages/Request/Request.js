@@ -29,7 +29,7 @@ const Request = () => {
     event.preventDefault();
     axios
       .post(
-        "http://idealabbackend-production.up.railway.app/api/book_equip/",
+        "https://idealabbackend-production.up.railway.app/api/book_equip/",
         formData,
         {
           headers: {
