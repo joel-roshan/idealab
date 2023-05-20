@@ -107,12 +107,12 @@ function Eventcardinside(props) {
                       <div className="contact-body">
                         <Contactsevents
                         phone="8590498682"
-                        name="john doe"
+                        name="Jaison Dennis"
                         position="Event Head"
                         />
                         <Contactsevents
                         phone="8138816173"
-                        name="john doe"
+                        name="Jaison Dennis"
                         position="Event Head"
                         />
                       </div>
