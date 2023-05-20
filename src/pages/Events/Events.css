@@ -435,7 +435,8 @@ img
       .contact-card
       {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        column-gap: 1em;
       }
       .phone-icon
       {
@@ -443,6 +444,7 @@ img
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-right: 0.2em;
       }
       .contact-body
       {
@@ -451,6 +453,25 @@ img
         align-items: center;
         justify-content: center;
         gap: 20px;
+      }
+      .name-position
+      {
+        margin-bottom: 5px;
+      }
+      .name-position .name{
+        font-size: large;
+        font-weight: 600;
+      }
+
+      .name-position .position{
+        font-size: medium;
+        font-weight: 400;
+      }
+      .contact-icon
+      {
+        display: flex;
+        flex-direction: row;
+        
       }
 
       

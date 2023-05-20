@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState} from "react";
 import Header from "../../components/Header";
 import "./Home.css";
 import car from "../../asset/car.jpg";
@@ -14,6 +14,7 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Announcements from "../../components/Announcements";
+import  Axios  from "axios";
 
 export function AddLibrary(urlOfTheLibrary) {
   const script = document.createElement("script");
@@ -30,6 +31,21 @@ export function Addscript(urlOfTheLibrary) {
   }
 }
 const Home = () => {
+  const [announcements, setAnnouncements] = useState([]);
+
+  useEffect(() => {
+    getannouncements();
+  }, []);
+
+
+  const getannouncements = () => {
+    Axios.get("https://idealabbackend-production.up.railway.app/api/list_annoucements/").then(
+      (res) => {
+        setAnnouncements(res.data);
+      }
+    )
+    .catch((err) => console.log(err));
+  }
   const circleRef = useRef(null);
 
   return (
@@ -39,40 +55,17 @@ const Home = () => {
       <div className="carousel">
         <div className="announcement">
           <h2 className="head-announce">From the lab</h2>
-          <Announcements
-            announce="announcement 1"
-            linkannounce="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"
-            linkname="Link1"
-          />
-          <Announcements
-            announce="announcement 2"
-            linkannounce="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"
-            linkname="Link2"
-          />
-          <Announcements
-            announce="announcement 3"
-            linkannounce="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"
-            linkname="Link3"
-          />
-          <Announcements
-            announce="announcement 1"
-            linkannounce="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"
-            linkname="Link1"
-          />
-          <Announcements
-            announce="announcement 1"
-            linkannounce="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"
-            linkname="Link1"
-          />
-          <Announcements
-            announce="announcement 1"
-            linkannounce="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"
-            linkname="Link1"
-          />
-          {/* <p className="announce">announcement 1</p>
-          <p className="announce">announcement 2</p>
-          <p className="announce">announcement 3</p>
-          <p className="announce">announcement 4</p> */}
+          {announcements.map((event) => (
+            <Announcements
+            announce = {event.announcement_title}
+            linkannounce={event.announcement_link}
+            linkname={event.announcement_desc}
+            />
+            
+          ))}
+
+
+          
         </div>
 
         <div className="image">

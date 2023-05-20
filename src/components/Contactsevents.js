@@ -14,11 +14,9 @@ function Contactsevents(props) {
             </div>
         </div>
         <div className="phone-icon">
-            <div className="phone-no">
-                {props.phone}
-            </div>
+            
             <div className="contact-icons">
-                <a href={"tel:"+ phone1}><FiPhoneCall/></a>
+                <a href={"tel:"+ phone1}><FiPhoneCall/>                {props.phone} </a>
             </div>
         </div>
             

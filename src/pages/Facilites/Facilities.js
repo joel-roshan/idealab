@@ -1,10 +1,27 @@
-import React from 'react'
+import React,{ useState , useEffect } from 'react'
 import FacilitiesCard from '../../components/FacilitiesCard'
 import Header from '../../components/Header'
 import './Facilities.css'
 import Footer from '../../components/Footer'
+import Axios from 'axios';
 
 const Facilities = () => {
+
+  const [facilities, setFacilities] = useState([]);
+
+  useEffect(() => {
+    getfacilities();
+  }, []);
+
+
+  const getfacilities = () => {
+    Axios.get("http://idealabbackend-production.up.railway.app/api/list_equipments/").then(
+      (res) => {
+        setFacilities(res.data);
+      }
+    )
+    .catch((err) => console.log(err));
+  }
   return (
     <div>
     <div id='facilities-body'>
@@ -13,34 +30,13 @@ const Facilities = () => {
           <h2 id= "event-heading">We have</h2>
         </div>
         <div className="facilities-grid">
-        <FacilitiesCard title = "3D Printer"
-            img = "https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
-            des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
-          />
-        <FacilitiesCard title = "3D Printer"
-            img = "https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
-            des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
-          />
-        <FacilitiesCard title = "3D Printer"
-            img = "https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
-            des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
-          />
-        <FacilitiesCard title = "3D Printer"
-            img = "https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
-            des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
-          />
-        <FacilitiesCard title = "3D Printer"
-            img = "https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
-            des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
-          />
-        <FacilitiesCard title = "3D Printer"
-            img = "https://www.stratasys.co.in/siteassets/3d-printers/printer-catalog/stereolitography/neo-series-printers/neoheader450.png?v=48e1d3&width=548&mode=crop"
-            des = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
-          />
-        <FacilitiesCard/>
-        <FacilitiesCard/>
-        <FacilitiesCard/>
-
+        {facilities.map((event) => (
+            <FacilitiesCard
+            img = "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSIaEsVq96A9ef5hNyMFNWuK4_SSYVR5DITgz2ry6cUrAvoxnWJwxOdPaJbFWR1rrZ4PzLufC4uhf-9b3w9ng2PEn7c7UnqdtKhTA6o2yfsLRo6HD5SL5nNdt_MIacyotn9drc&usqp=CAc"
+            tittle={event.name}
+            des={event.description}
+            />
+        ))}
         </div>
 
     </div>
