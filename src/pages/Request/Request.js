@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../../components/Header";
 import "./Request.css";
 import Footer from "../../components/Footer";
+import axios from "axios";
 
 const Request = () => {
   const [formData, setFormData] = useState({
@@ -26,18 +27,22 @@ const Request = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Send formData to the API endpoint using a POST request
-    fetch("http://idealabbackend-production.up.railway.app/api/book_equip/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
+    axios
+      .post(
+        "http://idealabbackend-production.up.railway.app/api/book_equip/",
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+            "Access-Control-Allow-Headers": "Content-Type",
+          },
+        }
+      )
+      .then((response) => {
         // Handle the response from the API
-        console.log(data);
+        console.log(response.data);
       })
       .catch((error) => {
         // Handle any errors that occurred during the request
