@@ -15,8 +15,6 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Announcements from "../../components/Announcements";
 
-
-
 export function AddLibrary(urlOfTheLibrary) {
   const script = document.createElement("script");
   script.src = urlOfTheLibrary;
@@ -33,22 +31,7 @@ export function Addscript(urlOfTheLibrary) {
 }
 const Home = () => {
   const circleRef = useRef(null);
-  gsap.registerPlugin(ScrollTrigger);
-  useEffect(() => {
-    gsap.set("#event-hold-multi", { x: 0 });
-    gsap.to("#event-hold-multi", {
-      x: -1290,
-      ease: "linear",
-      scrollTrigger: {
-        trigger: ".event", // pin the trigger element while active
-        start: "top 10px",
-        end: "bottom -10px",
-        // end after scrolling 500px beyond the start
-        // end after scrolling 500px beyond the start
-        scrub: 1,
-      },
-    });
-  }, []);
+
   return (
     <div id="homebody">
       <Header />
