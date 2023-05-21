@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import "./Request.css";
 import Footer from "../../components/Footer";
 import axios from "axios";
+import Cookies from "js-cookie";
+
+const csrftoken = Cookies.get("csrftoken");
 
 const Request = () => {
   const [formData, setFormData] = useState({
@@ -25,20 +28,39 @@ const Request = () => {
     }));
   };
 
+  const [equipmentOptions, setEquipmentOptions] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://idealabbackend-production.up.railway.app/api/list_equipments/"
+      )
+      .then((response) => {
+        // Extract the equipment options from the response data
+        const options = response.data.map((equipment) => ({
+          id: equipment.id,
+          name: equipment.name,
+          available: equipment.is_available,
+        }));
+
+        // Set the equipment options
+        setEquipmentOptions(options);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
   const handleSubmit = (event) => {
     event.preventDefault();
+    // Replace with your method of getting the CSRF token
+
+    axios.defaults.headers.common["X-CSRFToken"] = csrftoken;
+
     axios
       .post(
         "https://idealabbackend-production.up.railway.app/api/book_equip/",
-        formData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-            "Access-Control-Allow-Headers": "Content-Type",
-          },
-        }
+        formData
       )
       .then((response) => {
         // Handle the response from the API
@@ -132,13 +154,15 @@ const Request = () => {
               value={formData.equipment_name}
               onChange={handleChange}
             >
-              <option value={0} className="equip">
-                Select equipment *
-              </option>
-              <option value="cnc-machine">CNC Machine</option>
-              <option value="3D-printer">3D Printer</option>
-              <option value="Laser-Beam">Laser Cutter</option>
-              <option value="Sand-Cutter">Sand Blast</option>
+              {equipmentOptions.map((option) => (
+                <option
+                  key={option.id}
+                  value={option.id}
+                  disabled={!option.available}
+                >
+                  {option.name}
+                </option>
+              ))}
             </select>
           </div>
           <div className="box1">

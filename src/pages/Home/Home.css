@@ -371,11 +371,14 @@ a {
   background-color: #111;
 }
 
+.team-hold-multi div {
+  display: flex;
+  overflow-x: auto;
+}
 .team-hold-multi {
   display: flex;
   overflow-x: auto;
 }
-
 #team-txt {
   color: white;
 }
