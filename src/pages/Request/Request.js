@@ -59,7 +59,7 @@ const Request = () => {
 
     axios
       .post(
-        "http://idealabbackend-production-bcb3.up.railway.app/api/book_equip/",
+        "https://idealabbackend-production-bcb3.up.railway.app/api/book_equip/",
         formData
       )
       .then((response) => {

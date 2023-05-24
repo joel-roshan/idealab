@@ -15,7 +15,7 @@ const Facilities = () => {
 
 
   const getfacilities = () => {
-    Axios.get("http://idealabbackend-production.up.railway.app/api/list_equipments/").then(
+    Axios.get("https://idealabbackend-production.up.railway.app/api/list_equipments/").then(
       (res) => {
         setFacilities(res.data);
       }
