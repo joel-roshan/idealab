@@ -10,17 +10,17 @@ import EventcardInsidelist from "../../components/EventcardInsidelist";
 import TabButton from "./Tabs";
 import  Axios  from "axios";
 const Events = () => {
-  const [events, setEvents] = useState([]);
+  const [eventsongoing, setEventsongoing] = useState([]);
 
   useEffect(() => {
-    getEvents();
-  }, [events]);
+    getEventsongoing();
+  }, []);
 
-  const getEvents = () => {
+  const getEventsongoing = () => {
     Axios.get("http://idealabbackend-production.up.railway.app/api/list_all_events/").then(
       (res) => {
         console.log(res.body)
-        setEvents(res.data);
+        setEventsongoing(res.data);
         console.log("hi")
       }
     )
@@ -34,7 +34,8 @@ const Events = () => {
           <h2 id="event-heading">What's Happening</h2>
         </div>
         <div className="main-event">
-        {events.map((event) => (
+          <h2>ongoing events</h2>
+        {eventsongoing.map((event) => (
             <Eventcardinside
               // key={event.id}
               title={event.name}
@@ -49,6 +50,8 @@ const Events = () => {
               // time={event.time}
             />
           ))}
+          <h2>upcoming events</h2>
+          <h2>past events</h2>
 
 
           

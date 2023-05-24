@@ -33,7 +33,7 @@ const Request = () => {
   useEffect(() => {
     axios
       .get(
-        "https://idealabbackend-production.up.railway.app/api/list_equipments/"
+        "http://idealabbackend-production-bcb3.up.railway.app/api/list_equipments/"
       )
       .then((response) => {
         // Extract the equipment options from the response data
@@ -59,7 +59,7 @@ const Request = () => {
 
     axios
       .post(
-        "https://idealabbackend-production.up.railway.app/api/book_equip/",
+        "http://idealabbackend-production-bcb3.up.railway.app/api/book_equip/",
         formData
       )
       .then((response) => {
