@@ -35,7 +35,7 @@ const Request = () => {
     // Fetch the equipment data from the API
     axios
       .get(
-        "http://idealabbackend-production-bcb3.up.railway.app/api/list_equipments/"
+        "https://idealabbackend-production-bcb3.up.railway.app/api/list_equipments/"
       )
       .then((response) => {
         // Extract the equipment options from the response data
