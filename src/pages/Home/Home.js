@@ -38,7 +38,7 @@ const Home = () => {
 
   useEffect(() => {
     Axios.get(
-      "http://idealabbackend-production-bcb3.up.railway.app/api/list_upcoming_events/"
+      "https://idealabbackend-production-bcb3.up.railway.app/api/list_upcoming_events/"
     )
       .then((response) => {
         setEvent(response.data);
@@ -51,7 +51,7 @@ const Home = () => {
 
   useEffect(() => {
     Axios.get(
-      "http://idealabbackend-production-bcb3.up.railway.app/api/list_equipments/"
+      "https://idealabbackend-production-bcb3.up.railway.app/api/list_equipments/"
     )
       .then((response) => {
         setEquipment(response.data);
@@ -62,14 +62,14 @@ const Home = () => {
   }, []);
   const getannouncements = () => {
     Axios.get(
-      "http://idealabbackend-production-bcb3.up.railway.app/api/list_annoucements/"
+      "https://idealabbackend-production-bcb3.up.railway.app/api/list_annoucements/"
     )
       .then((res) => {
         setAnnouncements(res.data);
       })
       .catch((err) => console.log(err));
     fetch(
-      "http://idealabbackend-production-bcb3.up.railway.app/api/list_teams/"
+      "https://idealabbackend-production-bcb3.up.railway.app/api/list_teams/"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -100,17 +100,17 @@ const Home = () => {
         <div className="announcement">
           <h2 className="head-announce">From the lab</h2>
           {announcements.length > 0 ? (
-      announcements.map((event) => (
-        <Announcements
-          key={event.id}
-          announce={event.announcement_title}
-          linkannounce={event.announcement_link}
-          linkname={event.announcement_desc}
-        />
-      ))
-    ) : (
-      <div>Nothing For Now</div>
-    )}
+            announcements.map((event) => (
+              <Announcements
+                key={event.id}
+                announce={event.announcement_title}
+                linkannounce={event.announcement_link}
+                linkname={event.announcement_desc}
+              />
+            ))
+          ) : (
+            <div>Nothing For Now</div>
+          )}
         </div>
 
         <div className="image">
@@ -146,19 +146,19 @@ const Home = () => {
           <div id="event-hold-multi">
             <div>
               {event && event.length > 0 ? (
-      <div id="event-hold-multi">
-        {event.map((item) => (
-          <EventCard
-            key={item.id}
-            date={item.start_date}
-            img={item.img}
-            des={item.about}
-          />
-        ))}
-      </div>
-    ) : (
-      <div>Nothing For Now</div>
-    )}
+                <div id="event-hold-multi">
+                  {event.map((item) => (
+                    <EventCard
+                      key={item.id}
+                      date={item.start_date}
+                      img={item.img}
+                      des={item.about}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div>Nothing For Now</div>
+              )}
             </div>
           </div>
         </section>
@@ -206,72 +206,6 @@ const Home = () => {
               des={item.description}
             />
           ))}
-        </div>
-      </div>
-      <hr className="carouselrule" />
-      <div className="grid">
-        <h1 id="gallery-head">Snapshots</h1>
-        <div id="gallery" class="container-fluid">
-          <img
-            src="https://source.unsplash.com/1600x1200?female,portrait"
-            class="img-responsive"
-          />
-          <img
-            src="https://source.unsplash.com/1024x768?female,portrait"
-            class="img-responsive"
-          />
-          <img
-            src="https://source.unsplash.com/1366x768?female,portrait"
-            class="img-responsive"
-          ></img>
-          <img
-            src="https://source.unsplash.com/1920x1080?female,portrait"
-            class="img-responsive"
-          />
-          <img
-            src="https://source.unsplash.com/640x360?female,portrait"
-            class="img-responsive"
-          />
-          <img
-            src="https://source.unsplash.com/320x640?female,portrait"
-            class="img-responsive"
-          />
-          <img
-            src="https://source.unsplash.com/1200x1600?female,portrait"
-            class="card img-responsive"
-          />
-          <img
-            src="https://source.unsplash.com/800x600?female,portrait"
-            class="img-responsive"
-          />
-          <img
-            src="https://source.unsplash.com/600x800?female,portrait"
-            class="img-responsive"
-          />
-          <img
-            src="https://source.unsplash.com/400x600?female,portrait"
-            class="img-responsive"
-          />
-          <img
-            src="https://source.unsplash.com/600x400?female,portrait"
-            class="img-responsive"
-          />
-          <img
-            src="https://source.unsplash.com/1100x1600?female,portrait"
-            class="img-responsive"
-          />
-          <img
-            src="https://source.unsplash.com/1600x1100?female,portrait"
-            class="img-responsive"
-          />
-          <img
-            src="https://source.unsplash.com/992x768?female,portrait"
-            class="img-responsive"
-          />
-          <img
-            src="https://source.unsplash.com/768x992?female,portrait"
-            class="img-responsive"
-          />
         </div>
       </div>
       <hr className="carouselrule" />
