@@ -289,18 +289,18 @@ a {
 .about-image-hold {
   width: auto;
   display: flex;
+  align-items: center;
 }
 
 .about-image {
   border-radius: 4px;
-  width: 500px;
-  height: auto;
+  width: 30vw;
+  height: 30vw;
 }
 
 .about-content-hold {
   width: fit-content;
   display: flex;
-  margin-bottom: 20vh;
   align-items: center;
   justify-content: center;
 }
@@ -329,6 +329,10 @@ a {
 .about-content-image {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+.about-content-image div {
+  display: flex;
   align-items: center;
 }
 
@@ -610,7 +614,6 @@ a {
 
   .about-content-image {
     display: flex;
-    flex-direction: column-reverse;
     align-items: center;
   }
 

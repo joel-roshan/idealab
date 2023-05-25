@@ -1,10 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import ProfileCard from "../../components/ProfileCard";
 import "./Team.css";
 import Footer from "../../components/Footer";
 
 const Team = () => {
+  const [teams, setTeams] = useState([]);
+  const [studentTeams, setStudentTeams] = useState([]);
+  useEffect(() => {
+    fetch(
+      "https://idealabbackend-production-bcb3.up.railway.app/api/list_teams/"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        // Filter the data
+        const studentTeamsData = data.filter(
+          (team) => team.designation === "Student"
+        );
+        const teamsData = data.filter((team) => team.designation === "Faculty");
+
+        setTeams(teamsData);
+        // Update the studentTeams state with the filtered data
+        setStudentTeams(studentTeamsData);
+        // Process the data here
+        console.log(data);
+      })
+      .catch((error) => {
+        // Handle any errors
+        console.error(error);
+      });
+  }, []);
   return (
     <div>
       <Header />
@@ -19,28 +44,9 @@ const Team = () => {
 
         <div className="team-hold-multi-inside">
           <div>
-            <ProfileCard
-              name="Cat 1"
-              img="https://png.pngtree.com/png-clipart/20190520/original/pngtree-melancholy-cat-hand-drawn-avatar-design-paintedcatavatarpretty-cat-png-image_4078730.jpg"
-            />
-          </div>
-          <div>
-            <ProfileCard
-              name="John Appleseed"
-              img="https://www.getillustrations.com/photos/pack/3d-avatar-male_lg.png"
-            />
-          </div>
-          <div>
-            <ProfileCard
-              name="cat"
-              img="https://png.pngtree.com/png-clipart/20190520/original/pngtree-melancholy-cat-hand-drawn-avatar-design-paintedcatavatarpretty-cat-png-image_4078730.jpg"
-            />
-          </div>
-          <div>
-            <ProfileCard
-              name="John Appleseed"
-              img="https://www.getillustrations.com/photos/pack/3d-avatar-male_lg.png"
-            />
+            {teams.map((team) => (
+              <ProfileCard key={team.id} name={team.name} img={team.img} />
+            ))}
           </div>
         </div>
 
@@ -50,28 +56,9 @@ const Team = () => {
 
         <div className="team-hold-multi team-hold-multi-inside">
           <div>
-            <ProfileCard
-              name="cat"
-              img="https://png.pngtree.com/png-clipart/20190520/original/pngtree-melancholy-cat-hand-drawn-avatar-design-paintedcatavatarpretty-cat-png-image_4078730.jpg"
-            />
-          </div>
-          <div>
-            <ProfileCard
-              name="John Appleseed"
-              img="https://www.getillustrations.com/photos/pack/3d-avatar-male_lg.png"
-            />
-          </div>
-          <div>
-            <ProfileCard
-              name="cat"
-              img="https://png.pngtree.com/png-clipart/20190520/original/pngtree-melancholy-cat-hand-drawn-avatar-design-paintedcatavatarpretty-cat-png-image_4078730.jpg"
-            />
-          </div>
-          <div>
-            <ProfileCard
-              name="John Appleseed"
-              img="https://www.getillustrations.com/photos/pack/3d-avatar-male_lg.png"
-            />
+            {studentTeams.map((team) => (
+              <ProfileCard key={team.id} name={team.name} img={team.img} />
+            ))}
           </div>
         </div>
       </div>

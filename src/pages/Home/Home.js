@@ -126,10 +126,16 @@ const Home = () => {
         <div className="about-content-image">
           <div className="about-content-hold">
             <p className="about-content">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-              beatae dolore sint ab blanditiis repellat rerum tempore ipsa,
-              quasi sapiente. Sed labore, illum distinctio ad earum inventore
-              nobis dolor cumque!
+              AICTE in collaboration with COGNICOR established MEC IDEA Lab in
+              2022. It offers interactive learning workshops and training
+              programmes with the goal of fostering creativity and promoting
+              interest in applications of STEM, multidisciplinary education, and
+              collaboration. It will enable faculty and students alike to
+              "Engage, Explore, Experience, Express and Excel" by providing all
+              the facilities required to turn an idea into a prototype and learn
+              technical craft. It stands to assist in the development of
+              commercially viable products, meet socioeconomic needs, and
+              encourage entrepreneurship in the nearby student community.
             </p>
           </div>
           <div className="about-image-hold">
