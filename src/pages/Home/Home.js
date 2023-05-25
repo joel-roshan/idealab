@@ -2,17 +2,12 @@ import React, { useState } from "react";
 import Header from "../../components/Header";
 import "./Home.css";
 import car from "../../asset/car.jpg";
-import pic1 from "../../asset/pic1.jpg";
-import pic2 from "../../asset/pic2.jpg";
-import pic3 from "../../asset/pic3.jpg";
-import pic4 from "../../asset/pic4.jpg";
+
 import EventCard from "../../components/EventCard";
 import ProfileCard from "../../components/ProfileCard";
 import FacilitiesCard from "../../components/FacilitiesCard";
 import Footer from "../../components/Footer";
 import { useRef, useEffect } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import Announcements from "../../components/Announcements";
 import Axios from "axios";
 
@@ -38,16 +33,44 @@ const Home = () => {
   useEffect(() => {
     getannouncements();
   }, []);
+  const [equipment, setEquipment] = useState([]);
+  const [event, setEvent] = useState(null);
 
+  useEffect(() => {
+    Axios.get(
+      "http://idealabbackend-production-bcb3.up.railway.app/api/list_upcoming_events/"
+    )
+      .then((response) => {
+        setEvent(response.data);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
+  useEffect(() => {
+    Axios.get(
+      "http://idealabbackend-production-bcb3.up.railway.app/api/list_equipments/"
+    )
+      .then((response) => {
+        setEquipment(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
   const getannouncements = () => {
     Axios.get(
-      "https://idealabbackend-production.up.railway.app/api/list_annoucements/"
+      "http://idealabbackend-production-bcb3.up.railway.app/api/list_annoucements/"
     )
       .then((res) => {
         setAnnouncements(res.data);
       })
       .catch((err) => console.log(err));
-    fetch("http://idealabbackend-production.up.railway.app/api/list_teams/")
+    fetch(
+      "http://idealabbackend-production-bcb3.up.railway.app/api/list_teams/"
+    )
       .then((response) => response.json())
       .then((data) => {
         // Filter the data
@@ -76,13 +99,18 @@ const Home = () => {
       <div className="carousel">
         <div className="announcement">
           <h2 className="head-announce">From the lab</h2>
-          {announcements.map((event) => (
-            <Announcements
-              announce={event.announcement_title}
-              linkannounce={event.announcement_link}
-              linkname={event.announcement_desc}
-            />
-          ))}
+          {announcements.length > 0 ? (
+      announcements.map((event) => (
+        <Announcements
+          key={event.id}
+          announce={event.announcement_title}
+          linkannounce={event.announcement_link}
+          linkname={event.announcement_desc}
+        />
+      ))
+    ) : (
+      <div>Nothing For Now</div>
+    )}
         </div>
 
         <div className="image">
@@ -117,60 +145,20 @@ const Home = () => {
         <section id="event-wrapper">
           <div id="event-hold-multi">
             <div>
-              <EventCard
-                date="22-12-2222"
-                img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
-                des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
-              />
-            </div>
-            <div>
-              <EventCard
-                date="22-12-2222"
-                img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
-                des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
-              />
-            </div>
-            <div>
-              <EventCard
-                date="22-12-2222"
-                img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
-                des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
-              />
-            </div>
-            <div>
-              <EventCard
-                date="22-12-2222"
-                img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
-                des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
-              />
-            </div>
-            <div>
-              <EventCard
-                date="22-12-2222"
-                img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
-                des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
-              />
-            </div>
-            <div>
-              <EventCard
-                date="22-12-2222"
-                img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
-                des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
-              />
-            </div>
-            <div>
-              <EventCard
-                date="22-12-2222"
-                img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
-                des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
-              />
-            </div>
-            <div>
-              <EventCard
-                date="22-12-2222 last"
-                img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn2MAEL-OI7TvmRJjUwQb_GtBcRvYGelTCw&usqp=CAU"
-                des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....."
-              />
+              {event && event.length > 0 ? (
+      <div id="event-hold-multi">
+        {event.map((item) => (
+          <EventCard
+            key={item.id}
+            date={item.start_date}
+            img={item.img}
+            des={item.about}
+          />
+        ))}
+      </div>
+    ) : (
+      <div>Nothing For Now</div>
+    )}
             </div>
           </div>
         </section>
@@ -211,26 +199,13 @@ const Home = () => {
           <h3 id="equipment-head">We have</h3>
         </div>
         <div className="equipment-holder">
-          <FacilitiesCard
-            title="3D Printer"
-            img="https://www.pngmart.com/files/21/3D-Printer-PNG-Picture.png"
-            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
-          />
-          <FacilitiesCard
-            title="3D Printer"
-            img="https://www.pngmart.com/files/21/3D-Printer-PNG-Picture.png"
-            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
-          />
-          <FacilitiesCard
-            title="3D Printer"
-            img="https://www.pngmart.com/files/21/3D-Printer-PNG-Picture.png"
-            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
-          />
-          <FacilitiesCard
-            title="3D Printer"
-            img="https://www.pngmart.com/files/21/3D-Printer-PNG-Picture.png"
-            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...."
-          />
+          {equipment.map((item) => (
+            <FacilitiesCard
+              title={item.name}
+              img={item.img}
+              des={item.description}
+            />
+          ))}
         </div>
       </div>
       <hr className="carouselrule" />
