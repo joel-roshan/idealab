@@ -54,6 +54,7 @@
   display: flex;
   /* border: 1px solid black; */
   padding-top: 7px;
+  
 }
 img {
   width: 150px;
@@ -131,6 +132,30 @@ img {
 @media (max-width: 600px) {
   .main-event {
     gap: 70px;
+  }
+  .ongoing-event 
+{
+  min-height: 450px;
+}
+.ongoing-event h2
+{
+  margin-bottom: 50px;
+}
+.imgholder
+{
+  max-width: 300px;
+  max-height: 300px;
+  min-height: 300px;
+  min-width: 300px;
+}
+  .ven-date-time
+  {
+    display: flex;
+    flex-direction: column;
+  }
+  .active-content
+  {
+    max-width: 95vw;
   }
 
   .event-card {
@@ -238,7 +263,10 @@ body.active-modal {
   position: relative;
   background: white;
   border-radius: 20px;
-  min-height: 700px;
+  height: 700px;
+  max-height: 90vh;
+  max-width: 95vw;
+  overflow-y: scroll;
 }
 .modal-content {
   position: relative;
@@ -330,7 +358,7 @@ body.active-modal {
 }
 .active-content {
   display: block;
-  min-width: 580px;
+  /* width: 580px; */
 }
 .bloc-tabs {
   display: flex;
@@ -394,7 +422,6 @@ body.active-modal {
 }
 .ven-date-time {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
 }
@@ -438,4 +465,8 @@ body.active-modal {
 .contact-icon {
   display: flex;
   flex-direction: row;
+}
+.ongoing-event
+{
+  flex-wrap: wrap;
 }

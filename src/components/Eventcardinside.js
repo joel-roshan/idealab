@@ -43,12 +43,7 @@ function Eventcardinside(props) {
                   >
                     About
                   </button>
-                  <button
-                    className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
-                    onClick={() => toggleTab(2)}
-                  >
-                    Registration
-                  </button>
+                  
                   <button
                     className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
                     onClick={() => toggleTab(3)}
@@ -65,7 +60,7 @@ function Eventcardinside(props) {
                   >
                     <h2>About</h2>
                     <hr />
-                    <p>{props.about}</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea possimus, obcaecati vero atque repellat, dolor iste esse itaque quo officia error totam magni dolorum cumque? Impedit fugit excepturi iste unde, amet ex ut nihil reiciendis alias eum, voluptate sint delectus accusamus quidem inventore? Ipsam a assumenda consequatur accusamus, pariatur non.</p>
                     <div className="ven-date-time">
                       <div className="ven">
                         <p>Venue: {props.location}</p>
@@ -76,17 +71,8 @@ function Eventcardinside(props) {
                       <div className="ven">
                         <p>Time: {props.time}</p>
                       </div>
+                      
                     </div>
-                  </div>
-
-                  <div
-                    className={
-                      toggleState === 2 ? "content  active-content" : "content"
-                    }
-                  >
-                    <h2>Registration</h2>
-                    <hr />
-                    <p>{props.reg}</p>
                     <div className="reg-btn-wrap">
                       <a href={props.reg} target="_blank">
                         <button className="reg-btn">Register</button>
@@ -94,6 +80,8 @@ function Eventcardinside(props) {
                     </div>
                   </div>
 
+                  
+                    
                   <div
                     className={
                       toggleState === 3 ? "content  active-content" : "content"
