@@ -10,7 +10,20 @@ body {
 * {
   border-radius: 5px;
 }
-
+.error-event{
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.error-event p{
+  font-size: 1.5rem;
+  background: rgba(226, 237, 225, 0.462);
+  padding: 20px;
+  width: 60%;
+}
 #progressBar {
   position: fixed;
   top: 0;
@@ -83,12 +96,9 @@ body {
 }
 
 .announcement {
-  display: block;
-  margin-top: auto;
-  margin-bottom: auto;
   position: absolute;
   right: 200px;
-  height: 60vh;
+  height: 70vh;
   transform-style: preserve-3d;
   transform: perspective(1000px);
   background-color: #ffff;
@@ -101,6 +111,7 @@ body {
   padding-top: 0;
   max-height: 350px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 a {
@@ -615,15 +626,20 @@ a {
   .about-content-image {
     display: flex;
     align-items: center;
+    flex-direction: column-reverse;
   }
 
   .about-image-hold {
     height: auto;
+    flex-direction: column;
+    width: 80vw;
   }
 
   .about-image {
-    width: 50vw;
-    height: auto;
+    width: 70vw;
+    height: 30vh;
+    border-radius: 2px;
+    object-fit: cover;
   }
 
   .about-content {
@@ -652,6 +668,9 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .head-announce {
+    background: none;
   }
 }
 

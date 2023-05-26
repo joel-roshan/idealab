@@ -3,29 +3,46 @@ import { useState, useEffect } from "react";
 import Eventcardinside from "../../components/Eventcardinside";
 import Header from "../../components/Header";
 import "./Events.css";
-import pic1 from "../../asset/pic1.jpg";
-import poster from "../../asset/poster.jpeg";
 import Footer from "../../components/Footer";
-import EventcardInsidelist from "../../components/EventcardInsidelist";
-import TabButton from "./Tabs";
-import  Axios  from "axios";
+import Axios from "axios";
 const Events = () => {
   const [eventsongoing, setEventsongoing] = useState([]);
+  const [eventsupcoming, setEventsupcoming] = useState([]);
+  const [eventspast, setEventspast] = useState([]);
 
   useEffect(() => {
     getEventsongoing();
   }, []);
 
   const getEventsongoing = () => {
-    Axios.get("http://idealabbackend-production.up.railway.app/api/list_all_events/").then(
-      (res) => {
-        console.log(res.body)
-        setEventsongoing(res.data);
-        console.log("hi")
-      }
+    Axios.get(
+      "https://idealabbackend-production-bcb3.up.railway.app/api/list_ongoing_events/"
     )
-    .catch((err) => console.log(err));
-  }
+      .then((res) => {
+        console.log(res.body);
+        setEventsongoing(res.data);
+        console.log("hi");
+      })
+      .catch((err) => console.log(err));
+    Axios.get(
+      "https://idealabbackend-production-bcb3.up.railway.app/api/list_upcoming_events/"
+    )
+      .then((res) => {
+        console.log(res.body);
+        setEventsupcoming(res.data);
+        console.log("hi");
+      })
+      .catch((err) => console.log(err));
+    Axios.get(
+      "https://idealabbackend-production-bcb3.up.railway.app/api/list_past_events/"
+    )
+      .then((res) => {
+        console.log(res.body);
+        setEventspast(res.data);
+        console.log("hi");
+      })
+      .catch((err) => console.log(err));
+  };
   return (
     <div>
       <div id="event-body">
@@ -34,27 +51,79 @@ const Events = () => {
           <h2 id="event-heading">What's Happening</h2>
         </div>
         <div className="main-event">
-          <h2>ongoing events</h2>
-        {eventsongoing.map((event) => (
-            <Eventcardinside
-              // key={event.id}
-              title={event.name}
-              status={event.status}
-              // desc={event.description}
-              date={event.date}
-              location={event.location}
-              // locationlink={event.locationlink}
-              // pic={poster}
-              // about={event.about}
-              // reg={event.registration}
-              // time={event.time}
-            />
-          ))}
-          <h2>upcoming events</h2>
-          <h2>past events</h2>
+          <div className="ongoing-event">
+            <h2>Ongoing events</h2>
+            <div className="event-card-inside">
+              {eventsongoing.map((event) => (
+                <>
+                  <Eventcardinside
+                    // key={event.id}
+                    title={event.name}
+                    status={event.status}
+                    desc="{event.about}"
+                    date={event.start_date}
+                    location={event.location}
+                    // locationlink={event.locationlink}
+                    pic={event.event_img}
+                    about={event.about}
+                    reg={event.registration_link}
+                    contacts={event.event_coordinator}
+                    time={event.time}
+                  />
+                  {console.log(event.event_coordinator)}
+                </>
+              ))}
+            </div>
+          </div>
+          <div className="ongoing-event">
+            <h2>Upcoming events</h2>
+            <div className="event-card-inside">
+              {eventsupcoming.map((event) => (
+                <>
+                  <Eventcardinside
+                    // key={event.id}
+                    title={event.name}
+                    status={event.status}
+                    desc="{event.about}"
+                    date={event.start_date}
+                    location={event.location}
+                    // locationlink={event.locationlink}
+                    pic={event.event_img}
+                    about={event.about}
+                    reg={event.registration_link}
+                    contacts={event.event_coordinator}
+                    time={event.time}
+                  />
+                  {console.log(event.event_coordinator)}
+                </>
+              ))}
+            </div>
+          </div>
+          <div className="ongoing-event">
+            <h2>Past events</h2>
+            <div className="event-card-inside">
+              {eventspast.map((event) => (
+                <>
+                  <Eventcardinside
+                    // key={event.id}
+                    title={event.name}
+                    status={event.status}
+                    desc="{event.about}"
+                    date={event.start_date}
+                    location={event.location}
+                    // locationlink={event.locationlink}
+                    pic={event.event_img}
+                    about={event.about}
+                    reg={event.registration_link}
+                    contacts={event.event_coordinator}
+                    time={event.time}
+                  />
+                  {console.log(event.event_coordinator)}
+                </>
+              ))}
+            </div>
+          </div>
 
-
-          
           {/* <Eventcardinside
             title="Pre Marriage Counselling"
             status="ongoing"

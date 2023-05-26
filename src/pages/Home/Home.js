@@ -163,7 +163,12 @@ const Home = () => {
                   ))}
                 </div>
               ) : (
-                <div>Nothing For Now</div>
+                <div className="error-event">
+                  <p>
+                    Yikes, No events for the time being! Check back later to see
+                    more.
+                  </p>
+                </div>
               )}
             </div>
           </div>
