@@ -157,7 +157,7 @@ const Home = () => {
                     <EventCard
                       key={item.id}
                       date={item.start_date}
-                      img={item.img}
+                      img={item.event_img}
                       des={item.about}
                     />
                   ))}
