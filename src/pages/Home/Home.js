@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Header from "../../components/Header";
 import "./Home.css";
 import car from "../../asset/car.jpg";
-
 import EventCard from "../../components/EventCard";
 import ProfileCard from "../../components/ProfileCard";
 import FacilitiesCard from "../../components/FacilitiesCard";
@@ -221,20 +220,23 @@ const Home = () => {
       </div>
       <hr className="carouselrule" />
       <div id="c" className="contactuss">
-        <div className="mainbox">
-          <p>Name of Contact</p>
-          <p>Designation of Contact</p>
-          <p>Phone no of Contact</p>
+        <div className="contactus-heading">
+          <h3 id="contactus-head">Point of contact</h3>
         </div>
         <div className="mainbox">
-          <p>Name of Contact</p>
-          <p>Designation of Contact</p>
-          <p>Phone no of Contact</p>
+          <p>Vishnu C Rajeev</p>
+          <p>Student Co-ordinator</p>
+          <p>vishnucrajeev.mec@gmail.com</p>
         </div>
         <div className="mainbox">
-          <p>Name of Contact</p>
-          <p>Designation of Contact</p>
-          <p>Phone no of Contact</p>
+          <p>Binesh T</p>
+          <p>Faculty incharge</p>
+          <p>binesht@mec.ac.in</p>
+        </div>
+        <div className="mainbox">
+          <p>Dr. Jacob Thomas V</p>
+          <p>Principal</p>
+          <p>principal@mec.ac.in</p>
         </div>
       </div>
       <hr className="carouselrule" />
