@@ -1,0 +1,72 @@
+version: '3'
+services:
+
+  idealab_proxy:
+    image: caddy:2-alpine
+    container_name: idealab_proxy
+    restart: always
+    ports:
+      - "80:80"
+    # environment:
+      # - VIRTUAL_HOST=idealab.mec.ac.in 
+    volumes:
+      - $PWD/Caddyfile:/etc/caddy/Caddyfile 
+      - caddy_data_idealab:/data 
+      - caddy_config_idealab:/config
+
+  idealab_db:
+    image: postgres:13
+    restart: always
+    container_name: idealab_db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=idealab
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  idealab_backend:
+    container_name: idealab_backend
+    restart: always
+    build:
+      context: ./backend
+      dockerfile: ../Dockerfile.backend
+    ports:
+      - 8000:8000
+    depends_on:
+      - idealab_db
+    environment:
+      - PGDATABASE=idealab
+      - PGUSER=postgres
+      - PGPASSWORD=postgres
+      - PGHOST=idealab_db
+      - PGPORT=5432
+
+  idealab_frontend:
+    container_name: idealab_frontend
+    restart: always
+    build:
+      context: ./frontend
+      dockerfile: ../Dockerfile.frontend
+    ports:
+      - 3000:3000
+    depends_on:
+      - idealab_backend
+      - idealab_db
+
+volumes:
+  pgdata:
+    driver: local
+
+  caddy_data_idealab:
+    driver: local
+
+  caddy_config_idealab:
+    driver: local
+
+# networks:
+#   default:
+#     external:
+#       name: mec

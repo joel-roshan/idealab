@@ -1,0 +1,45 @@
+version: '3'
+services:
+  idealab_db:
+    image: postgres:13
+    restart: always
+    container_name: idealab_db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=idealab
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  idealab_backend:
+    container_name: idealab_backend
+    restart: always
+    build:
+      context: ./backend
+      dockerfile: ../Dockerfile.backend
+    depends_on:
+      - idealab_db
+    environment:
+      - PGDATABASE=idealab
+      - PGUSER=postgres
+      - PGPASSWORD=postgres
+      - PGHOST=idealab_db
+      - PGPORT=5432
+
+  idealab_frontend:
+    container_name: idealab_frontend
+    restart: always
+    ports: 
+      - "3000:80"
+    build:
+      context: ./frontend
+      dockerfile: ../Dockerfile.frontend
+    depends_on:
+      - idealab_backend
+      - idealab_db
+
+volumes:
+  pgdata:
+    driver: local

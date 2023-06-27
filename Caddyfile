@@ -1,0 +1,18 @@
+{
+	auto_https off
+}
+
+http://idealab.mec.ac.in {
+	handle /api {
+		uri /api strip_prefix /api
+		reverse_proxy http://idealab_backend:8000
+	}
+	handle /api/* {
+		uri /api/* strip_prefix /api
+		reverse_proxy http://idealab_backend:8000
+	}
+
+	handle * {
+		reverse_proxy http://idealab_frontend:3000
+	}
+}
