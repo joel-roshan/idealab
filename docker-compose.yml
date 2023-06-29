@@ -6,9 +6,9 @@ services:
     restart: always
     container_name: idealab_db
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=idealab
+      - POSTGRES_USER=postgresMEC
+      - POSTGRES_PASSWORD=postgresMEC
+      - POSTGRES_DB=idealabMEC
     ports:
       - 5432
     volumes:
@@ -25,9 +25,9 @@ services:
     ports:
       - 80
     environment:
-      - PGDATABASE=idealab
-      - PGUSER=postgres
-      - PGPASSWORD=postgres
+      - PGDATABASE=idealabMEC
+      - PGUSER=postgresMEC
+      - PGPASSWORD=postgresMEC
       - PGHOST=idealab_db
       - PGPORT=5432
       - VIRTUAL_HOST=api.idealab.mec.ac.in
