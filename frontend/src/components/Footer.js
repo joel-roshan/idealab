@@ -29,14 +29,14 @@ const Footer = () => {
             Kerala, PIN: 682021
             <br />
             Contact:
-            <a href="mailto:hodcs@mec.ac.in" id="mail">
-              hodcs@mec.ac.in
+            <a href="mailto:idealab@mec.ac.in" id="mail">
+            idealab@mec.ac.in
             </a>
             <br />
             Phone:
-            <a href="tel:04842307127" id="mail">
+            {/* <a href="tel:04842307127" id="mail">
               0484 2307127
-            </a>
+            </a> */}
           </p>
         </div>
       </section>

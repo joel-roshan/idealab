@@ -10,6 +10,7 @@ import { useRef, useEffect } from "react";
 import Announcements from "../../components/Announcements";
 import Axios from "axios";
 
+
 export function AddLibrary(urlOfTheLibrary) {
   const script = document.createElement("script");
   script.src = urlOfTheLibrary;
@@ -37,7 +38,7 @@ const Home = () => {
 
   useEffect(() => {
     Axios.get(
-      "https://idealabbackend-production-bcb3.up.railway.app/api/list_upcoming_events/"
+      `${process.env.REACT_APP_API}/api/list_upcoming_events/`
     )
       .then((response) => {
         setEvent(response.data);
@@ -50,7 +51,7 @@ const Home = () => {
 
   useEffect(() => {
     Axios.get(
-      "https://idealabbackend-production-bcb3.up.railway.app/api/list_equipments/"
+      `${process.env.REACT_APP_API}/api/list_equipments/`
     )
       .then((response) => {
         setEquipment(response.data);
@@ -61,14 +62,14 @@ const Home = () => {
   }, []);
   const getannouncements = () => {
     Axios.get(
-      "https://idealabbackend-production-bcb3.up.railway.app/api/list_annoucements/"
+      `${process.env.REACT_APP_API}/api/list_annoucements/`
     )
       .then((res) => {
         setAnnouncements(res.data);
       })
       .catch((err) => console.log(err));
     fetch(
-      "https://idealabbackend-production-bcb3.up.railway.app/api/list_teams/"
+      `${process.env.REACT_APP_API}api/list_teams/`
     )
       .then((response) => response.json())
       .then((data) => {
