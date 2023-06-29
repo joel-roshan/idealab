@@ -1,23 +1,16 @@
-# Use the official Python image as the base image
 FROM python:3.9
 
-# Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file to the working directory
 COPY requirements.txt .
 
 RUN mkdir staticfiles
 
-# Create a virtual environment and activate it
 RUN python -m venv env
 RUN . env/bin/activate
 
-# Install project dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the project files to the working directory
 COPY . .
 
-# Start the Django development server
 ENTRYPOINT ["bash","entrypoint.sh"]
