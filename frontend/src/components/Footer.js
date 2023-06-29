@@ -34,9 +34,9 @@ const Footer = () => {
             </a>
             <br />
             Phone:
-            {/* <a href="tel:04842307127" id="mail">
-              0484 2307127
-            </a> */}
+            <a href="tel:9605169646" id="mail">
+            9605169646
+            </a>
           </p>
         </div>
       </section>
