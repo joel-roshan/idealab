@@ -9,7 +9,7 @@ import Footer from "../../components/Footer";
 import { useRef, useEffect } from "react";
 import Announcements from "../../components/Announcements";
 import Axios from "axios";
-
+import { apiURL } from "../../configs/urls";
 
 export function AddLibrary(urlOfTheLibrary) {
   const script = document.createElement("script");
@@ -37,9 +37,7 @@ const Home = () => {
   const [event, setEvent] = useState(null);
 
   useEffect(() => {
-    Axios.get(
-      `${process.env.REACT_APP_API}/api/list_upcoming_events/`
-    )
+    Axios.get(`${apiURL}/api/list_upcoming_events/`)
       .then((response) => {
         setEvent(response.data);
         console.log(response.data);
@@ -50,9 +48,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    Axios.get(
-      `${process.env.REACT_APP_API}/api/list_equipments/`
-    )
+    Axios.get(`${apiURL}/api/list_equipments/`)
       .then((response) => {
         setEquipment(response.data);
       })
@@ -61,16 +57,12 @@ const Home = () => {
       });
   }, []);
   const getannouncements = () => {
-    Axios.get(
-      `${process.env.REACT_APP_API}/api/list_annoucements/`
-    )
+    Axios.get(`${apiURL}/api/list_annoucements/`)
       .then((res) => {
         setAnnouncements(res.data);
       })
       .catch((err) => console.log(err));
-    fetch(
-      `${process.env.REACT_APP_API}api/list_teams/`
-    )
+    fetch(`${apiURL}/api/list_teams/`)
       .then((response) => response.json())
       .then((data) => {
         // Filter the data
