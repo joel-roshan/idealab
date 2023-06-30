@@ -30,7 +30,9 @@ services:
       - PGPASSWORD=postgresMEC
       - PGHOST=idealab_db
       - PGPORT=5432
-      - VIRTUAL_HOST=api.idealab.mec.ac.in
+      - VIRTUAL_HOST=api-idealab.mec.ac.in
+    volumes:
+      - ./backend/media:/app/media
 
   idealab_frontend:
     container_name: idealab_frontend
@@ -44,6 +46,7 @@ services:
     ports:
       - 80
     environment:
+      - REACT_APP_API=api-idealab.mec.ac.in
       - VIRTUAL_HOST=idealab.mec.ac.in
 
 volumes:
