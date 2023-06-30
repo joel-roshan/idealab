@@ -5,6 +5,8 @@ import Header from "../../components/Header";
 import "./Credit.css";
 import profile1 from "../../asset/joel.JPG";
 import profile2 from "../../asset/joelj.png";
+import profile3 from "../../asset/khushi.jpeg";
+import profile4 from "../../asset/aswin.jpeg";
 
 export function Addscript(urlOfTheLibrary) {
   if (window.innerWidth > 720) {
@@ -24,20 +26,38 @@ export const Credits = () => {
         <CreditCard
           name="Joel K George"
           profile={profile1}
-          role="Full Stack Developer"
+          role="Frontend Developer"
           year="2026"
         />
         <CreditCard
           name="Joel Joseph Roshan"
           profile={profile2}
-          role="Full Stack Developer"
+          role="Fronted Developer"
           year="2026"
         />
         <CreditCard
           name="Khushi Nilesh Ved"
-          profile="photo coming soon"
-          role="Full Stack Developer"
+          profile={profile3}
+          role="Frontend Developer"
           year="2026"
+        />
+          <CreditCard
+          name="Aswin Sreenivas "
+          profile={profile4}
+          role="Backend Developer"
+          year="2025"
+        />
+                <CreditCard
+          name="Kevin Oomen Anish"
+          profile=""
+          role="Backend Developer"
+          year="2025"
+        />
+                <CreditCard
+          name="Jeff Prakash"
+          profile=""
+          role="Backend Developer"
+          year="2025"
         />
       </div>
       <Footer />
