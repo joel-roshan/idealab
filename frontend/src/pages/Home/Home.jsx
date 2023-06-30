@@ -216,6 +216,7 @@ const Home = () => {
         <div className="contactus-heading">
           <h3 id="contactus-head">Point of contact</h3>
         </div>
+        <div className="mainboxwrapper">
         <div className="mainbox">
           <p>Vishnu C Rajeev</p>
           <p>Student Co-ordinator</p>
@@ -231,6 +232,7 @@ const Home = () => {
           <p>Principal</p>
           <p>principal@mec.ac.in</p>
         </div>
+      </div>
       </div>
       <hr className="carouselrule" />
       <Footer />

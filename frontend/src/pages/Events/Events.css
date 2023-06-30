@@ -19,6 +19,8 @@
 .event-card-inside {
   display: flex;
   flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
 }
 .ongoing-events {
   display: flex;

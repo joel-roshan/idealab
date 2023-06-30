@@ -3,13 +3,15 @@ import Header from "../../components/Header";
 import ProfileCard from "../../components/ProfileCard";
 import "./Team.css";
 import Footer from "../../components/Footer";
+import { apiURL } from "../../configs/urls";
+
 
 const Team = () => {
   const [teams, setTeams] = useState([]);
   const [studentTeams, setStudentTeams] = useState([]);
   useEffect(() => {
     fetch(
-      "https://idealabbackend-production-bcb3.up.railway.app/api/list_teams/"
+      `${apiURL}/api/list_teams/`
     )
       .then((response) => response.json())
       .then((data) => {

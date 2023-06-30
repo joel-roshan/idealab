@@ -532,7 +532,8 @@ a {
 }
 .contactuss {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: auto;
   background: #212121;
@@ -541,6 +542,14 @@ a {
   padding: 50px;
   animation: gradientmove 16s infinite linear;
   border-radius: 8px;
+}
+.mainboxwrapper
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: fit-content;
+  gap: 50px;
 }
 .mainbox {
   background-color: #e0e2e6;
@@ -551,6 +560,7 @@ a {
   border-radius: 10px;
   color: #111;
   padding: 10px 30px;
+
 }
 
 @media (max-width: 1100px) {

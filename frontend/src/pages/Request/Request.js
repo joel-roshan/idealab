@@ -3,6 +3,8 @@ import Header from "../../components/Header";
 import "./Request.css";
 import Footer from "../../components/Footer";
 import axios from "axios";
+import { apiURL } from "../../configs/urls";
+
 
 const Request = () => {
   const [formData, setFormData] = useState({
@@ -35,7 +37,7 @@ const Request = () => {
     // Fetch the equipment data from the API
     axios
       .get(
-        "https://idealabbackend-production-bcb3.up.railway.app/api/list_equipments/"
+        `${apiURL}/api/list_equipments`
       )
       .then((response) => {
         // Extract the equipment options from the response data
@@ -57,7 +59,7 @@ const Request = () => {
     // Replace with your method of getting the CSRF token
     axios
       .post(
-        "https://idealabbackend-production-bcb3.up.railway.app/api/book_equip/",
+        `${apiURL}/api/book_equip/`,
         formData
       )
       .then((response) => {

@@ -4,6 +4,8 @@ import Header from "../../components/Header";
 import "./Facilities.css";
 import Footer from "../../components/Footer";
 import Axios from "axios";
+import { apiURL } from "../../configs/urls";
+
 
 const Facilities = () => {
   const [facilities, setFacilities] = useState([]);
@@ -14,7 +16,7 @@ const Facilities = () => {
 
   const getfacilities = () => {
     Axios.get(
-      "https://idealabbackend-production-bcb3.up.railway.app/api/list_equipments/"
+      `${apiURL}/api/list_equipments/`
     )
       .then((res) => {
         setFacilities(res.data);
