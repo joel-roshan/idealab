@@ -28,10 +28,8 @@ DEBUG = True
 
 
 
-CSRF_TRUSTED_ORIGINS = [
-    
-    'https://idealabbackend-production.up.railway.app',
-    'https://idealabbackend-production-bcb3.up.railway.app'
+CSRF_TRUSTED_ORIGINS = [   
+    'https://api-idealab.mec.ac.in',
 ]
 
 
