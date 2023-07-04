@@ -1,8 +1,12 @@
 #footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 30px;
   width: auto;
+}
+#whole-foot
+{
+  width: 100vw;
 }
 #footer-parag {
   margin: 20px;
@@ -12,7 +16,7 @@
 }
 #base {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   font-size: 0.9em;

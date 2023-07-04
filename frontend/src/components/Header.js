@@ -28,16 +28,16 @@ const Header = () => {
       <div className={showMediaIcons ? "navbigdiv mobnavbigdiv" : "navbigdiv"}>
         <div className="home">
           <Link to="/" className="navtext">
-            home
+            Home
           </Link>
           <Link to="/facilities" className="navtext ">
-            facilities
+            Facilities
           </Link>
           <Link to="/events" className="navtext ">
-            events
+            Events
           </Link>
           <Link to="/team" className="navtext ">
-            team
+            Team
           </Link>
         </div>
 

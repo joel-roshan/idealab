@@ -53,7 +53,9 @@ const Events = () => {
           <h2 id="event-heading">What's Happening</h2>
         </div>
         <div className="main-event">
+        {eventsongoing && eventsongoing.length>0 ? (
           <div className="ongoing-event">
+            
             <h2>Ongoing events</h2>
             <div className="event-card-inside">
               {eventsongoing.map((event) => (
@@ -77,6 +79,14 @@ const Events = () => {
               ))}
             </div>
           </div>
+  ):(
+      <div className="none">
+      </div>
+  )
+  }
+
+
+        { eventsupcoming.length>0 ? (
           <div className="ongoing-event">
             <h2>Upcoming events</h2>
             <div className="event-card-inside">
@@ -101,7 +111,16 @@ const Events = () => {
               ))}
             </div>
           </div>
+        ):(
+
+          <div className="none">
+      </div>
+
+        )}
+        {eventspast.length > 0 ?
+            (
           <div className="ongoing-event">
+            
             <h2>Past events</h2>
             <div className="event-card-inside">
               {eventspast.map((event) => (
@@ -125,7 +144,10 @@ const Events = () => {
               ))}
             </div>
           </div>
-
+            ):(
+              <div className="none">
+                </div>
+            )}
           
         </div>
         <div id="fillerfor"></div>
