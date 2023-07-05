@@ -8,6 +8,41 @@ import Axios from "axios";
 import { apiURL } from "../../configs/urls";
 
 const Events = () => {
+  function formatDate(dateString) {
+    const dateParts = dateString.split("-");
+    const year = dateParts[0];
+    const month = dateParts[1];
+    const day = dateParts[2];
+    return `${day}-${month}-${year}`;
+  }
+  function formatTime(time)
+  { 
+    const timeParts = time.split(":");
+    const hour = Number(timeParts[0]);
+    const minutes = timeParts[1];
+    var newTime ;
+    if (hour === 12)
+    {
+      newTime = `${hour}:${minutes} PM`;
+    }
+    else if(hour>=13)
+    {
+      newTime = `${hour-12}:${minutes} PM`;
+    }
+    else if (hour===0)
+    {
+      newTime = `12:${minutes} AM`;
+    }
+    else
+    {
+      newTime = `${hour}:${minutes} AM`;
+
+    }
+
+    
+    return newTime;
+    
+  }
   const [eventsongoing, setEventsongoing] = useState([]);
   const [eventsupcoming, setEventsupcoming] = useState([]);
   const [eventspast, setEventspast] = useState([]);
@@ -64,8 +99,8 @@ const Events = () => {
                     // key={event.id}
                     title={event.name}
                     status={event.status}
-                    desc="{event.about}"
-                    date={event.start_date}
+                    desc={event.about}
+                    date={formatDate(event.start_date)}
                     location={event.location}
                     // locationlink={event.locationlink}
                     pic={event.event_img}
@@ -96,15 +131,15 @@ const Events = () => {
                     // key={event.id}
                     title={event.name}
                     status={event.status}
-                    desc="{event.about}"
-                    date={event.start_date}
+                    desc={event.about}
+                    date={formatDate(event.start_date)}
                     location={event.location}
                     // locationlink={event.locationlink}
                     pic={event.event_img}
                     about={event.about}
                     reg={event.registration_link}
                     contacts={event.event_coordinator}
-                    time={event.time}
+                    time={formatTime(event.time)}
                   />
                   {console.log(event.event_coordinator)}
                 </>
@@ -129,8 +164,8 @@ const Events = () => {
                     // key={event.id}
                     title={event.name}
                     status={event.status}
-                    desc="{event.about}"
-                    date={event.start_date}
+                    desc={event.about}
+                    date={formatDate(event.start_date)}
                     location={event.location}
                     // locationlink={event.locationlink}
                     pic={event.event_img}
