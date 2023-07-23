@@ -33,7 +33,7 @@ function Eventcardinside(props) {
           <div className="modal-box">
             <div className="modal-content">
               <div className="modal-logo">IDEALab</div>
-              <h2>{props.title}</h2>
+              <div className="modal-tittle"><h2>{props.title}</h2></div>
 
               <div className="tabs-container">
                 <div className="bloc-tabs">
@@ -60,7 +60,7 @@ function Eventcardinside(props) {
                   >
                     <h2>About</h2>
                     <hr />
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea possimus, obcaecati vero atque repellat, dolor iste esse itaque quo officia error totam magni dolorum cumque? Impedit fugit excepturi iste unde, amet ex ut nihil reiciendis alias eum, voluptate sint delectus accusamus quidem inventore? Ipsam a assumenda consequatur accusamus, pariatur non.</p>
+                    <p>{props.about}</p>
                     <div className="ven-date-time">
                       <div className="ven">
                         <p>Venue: {props.location}</p>
@@ -131,11 +131,11 @@ function Eventcardinside(props) {
               {/* <p>{props.location}</p> */}
             </div>
           </div>
-          <div className="status-time">
-            <div className="status">
+          {/* <div className="status-time"> */}
+            {/* <div className="time">
               <p>{props.time}</p>
-            </div>
-            <div className="time">{/* <p>{props.time}</p> */}</div>
+            </div> */}
+          <div className="btn-wrapper">
             <div className="btn-info">
               <button onClick={toggleModal} className="more-btn">
                 more
@@ -144,7 +144,7 @@ function Eventcardinside(props) {
           </div>
         </div>
       </div>
-    </div>
+     </div>
   );
 }
 

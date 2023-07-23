@@ -4,7 +4,7 @@ import "./Home.css";
 import car from "../../asset/car.jpg";
 import EventCard from "../../components/EventCard";
 import ProfileCard from "../../components/ProfileCard";
-import FacilitiesCard from "../../components/FacilitiesCard";
+import FacilitiesCardHome from "../../components/FacilitiesCardHome/FacilitiesCardHome.js";
 import Footer from "../../components/Footer";
 import { useRef, useEffect } from "react";
 import Announcements from "../../components/Announcements";
@@ -26,6 +26,13 @@ export function Addscript(urlOfTheLibrary) {
   }
 }
 const Home = () => {
+  function formatDate(dateString) {
+    const dateParts = dateString.split("-");
+    const year = dateParts[0];
+    const month = dateParts[1];
+    const day = dateParts[2];
+    return `${day}-${month}-${year}`;
+  }
   const [announcements, setAnnouncements] = useState([]);
   const [teams, setTeams] = useState([]);
   const [studentTeams, setStudentTeams] = useState([]);
@@ -109,7 +116,7 @@ const Home = () => {
           <img src={car} alt="" className="car" />
         </div>
       </div>
-      <hr className="carouselrule" />
+      {/* <hr className="carouselrule" /> */}
       <div className="about">
         <div className="about-txt-hold">
           <h2 className="about-txt">About idea Lab</h2>
@@ -135,10 +142,12 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <hr className="carouselrule" />
+      {/* <hr className="carouselrule" /> */}
       <div className="event">
+        <div className="event-head-wrapper">
         <div className="event-head">
           <h2 id="event-txt-head">Events</h2>
+        </div>
         </div>
         <section id="event-wrapper">
           <div id="event-hold-multi">
@@ -148,9 +157,9 @@ const Home = () => {
                   {event.map((item) => (
                     <EventCard
                       key={item.id}
-                      date={item.start_date}
+                      date={formatDate(item.start_date)}
                       img={item.event_img}
-                      des={item.about}
+                      title={item.name}
                     />
                   ))}
                 </div>
@@ -167,7 +176,7 @@ const Home = () => {
         </section>
       </div>
 
-      <hr className="carouselrule" />
+      {/* <hr className="carouselrule" /> */}
       <div className="team">
         <div className="team-head">
           <h2 id="team-txt">Team</h2>
@@ -178,40 +187,40 @@ const Home = () => {
         </div>
 
         <div className="team-hold-multi">
-          <div>
+          
             {teams.map((team) => (
               <ProfileCard key={team.id} name={team.name} img={team.img} />
             ))}
-          </div>
+          
         </div>
         <div className="student">
           <h3 id="student-txt">Student in charges</h3>
         </div>
 
         <div className="team-hold-multi">
-          <div>
+          
             {studentTeams.map((team) => (
               <ProfileCard key={team.id} name={team.name} img={team.img} />
             ))}
-          </div>
+          
         </div>
       </div>
-      <hr className="carouselrule" />
+      {/* <hr className="carouselrule" /> */}
       <div className="equipments">
         <div className="equipment-heading">
           <h3 id="equipment-head">We have</h3>
         </div>
         <div className="equipment-holder">
           {equipment.map((item) => (
-            <FacilitiesCard
+            <FacilitiesCardHome
               title={item.name}
               img={item.img}
-              des={item.description}
+              // des={item.description}
             />
           ))}
         </div>
       </div>
-      <hr className="carouselrule" />
+      {/* <hr className="carouselrule" /> */}
       <div id="c" className="contactuss">
         <div className="contactus-heading">
           <h3 id="contactus-head">Point of contact</h3>
@@ -234,7 +243,7 @@ const Home = () => {
         </div>
       </div>
       </div>
-      <hr className="carouselrule" />
+      {/* <hr className="carouselrule" /> */}
       <Footer />
 
       {Addscript("./tilt.js")}

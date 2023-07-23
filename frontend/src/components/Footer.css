@@ -3,6 +3,7 @@
   justify-content: space-between;
   padding: 30px;
   width: auto;
+  margin : 0 1rem 0 1rem;
 }
 #whole-foot
 {
@@ -14,15 +15,21 @@
 #mail {
   color: blue;
 }
+.logo>img
+{
+  width: 5px;
+}
 #base {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   font-size: 0.9em;
+  margin : 0 1rem 0 1rem;
+
 }
 #whole-foot {
-  background-color: white;
+  background-color: aliceblue;
 }
 #logo {
   width: fit-content;
@@ -35,6 +42,13 @@
   width: 200px;
   height: auto;
 }
+.icons
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 @media (max-width: 800px) {
   #footer {
     flex-direction: column;
@@ -44,5 +58,16 @@
   }
   #logo {
     width: 100px;
+  }
+  #cognicor-logo {
+    width: 100px;
+    height: auto;
+  }
+  #mec-footer
+  {
+    width: 100px;
+  }
+  .icons{
+    margin-top: 50px;
   }
 }

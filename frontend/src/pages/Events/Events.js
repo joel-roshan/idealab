@@ -96,7 +96,7 @@ const Events = () => {
               {eventsongoing.map((event) => (
                 <>
                   <Eventcardinside
-                    // key={event.id}
+                    key={event.id}
                     title={event.name}
                     status={event.status}
                     desc={event.about}
@@ -107,7 +107,7 @@ const Events = () => {
                     about={event.about}
                     reg={event.registration_link}
                     contacts={event.event_coordinator}
-                    time={event.time}
+                    time={formatTime(event.time)}
                   />
                   {console.log(event.event_coordinator)}
                 </>
@@ -172,7 +172,7 @@ const Events = () => {
                     about={event.about}
                     reg={event.registration_link}
                     contacts={event.event_coordinator}
-                    time={event.time}
+                    time={formatTime(event.time)}
                   />
                   {console.log(event.event_coordinator)}
                 </>
@@ -187,7 +187,7 @@ const Events = () => {
         </div>
         <div id="fillerfor"></div>
       </div>
-      <hr className="carouselrule" />
+      {/* <hr className="carouselrule" /> */}
       <Footer />
     </div>
   );

@@ -1,11 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap"); */
+
+  /* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;500&display=swap'); */
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;500&family=Questrial&display=swap');
 
 Navbar {
   text-align: center;
 }
 
 body {
-  font-family: "Roboto Mono";
+  /* font-family: "Roboto Mono"; */
+  font-family: 'Nunito', sans-serif;
+  /* font-family: 'Questrial', sans-serif; */
 }
 * {
   border-radius: 5px;
@@ -89,8 +94,8 @@ body {
 }
 .link-announce {
   text-decoration: underline;
-  text-decoration-color: #0000ee;
-  color: #0000ee;
+  text-decoration-color: black;
+  color: black;
   font-size: small;
   padding-left: 20px;
 }
@@ -111,7 +116,6 @@ body {
   padding-top: 0;
   max-height: 350px;
   overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 a {
@@ -143,16 +147,14 @@ a {
 }
 
 .link-announce:hover {
-  background: black;
-  color: white;
+  background: #c7c7c7;
+  color: black;
 }
 .link-announce {
   color: black;
-  text-decoration: none;
-  background: #212121;
+  text-decoration: underline;
   padding: 10px;
   border-radius: 5px;
-  color: white;
   margin: 5px;
 }
 
@@ -214,8 +216,12 @@ a {
   transform: translateY(-5px);
 }
 
+.about{
+  background-color: white;
+}
+
 .about-txt {
-  color: white;
+  color: black;
 }
 
 .about-txt:hover {
@@ -241,11 +247,9 @@ a {
     #edca85 94%
   );
   background-size: 200% auto;
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
-  transition: 0.25s ease-in-out;
-  animation: gradientmove 3s infinite linear;
-  height: 100%;
+  animation: gradientmove 8s infinite linear;
 }
 
 @keyframes wave-animation {
@@ -318,7 +322,7 @@ a {
 
 .about-content {
   width: 30vw;
-  color: white;
+  color: black;
 }
 
 .about-txt-hold {
@@ -332,8 +336,6 @@ a {
 
 .about {
   height: auto;
-  padding: 30px;
-  background-color: #111;
   border-radius: 5px;
 }
 
@@ -352,15 +354,16 @@ a {
 }
 
 .event {
-  padding: 5vw;
-  background: linear-gradient(
+  /* background: linear-gradient(
     120deg,
     rgb(35, 88, 173) 30%,
     rgb(55, 200, 195) 60%,
     rgb(35, 88, 173)
   );
   background-size: 200% auto;
-  animation: gradientmove 8s infinite linear;
+  animation: gradientmove 8s infinite linear; */
+  background-color: aliceblue;
+  margin-top: 10px;
 }
 
 #filler {
@@ -376,26 +379,32 @@ a {
 
 #event-hold-multi {
   display: flex;
-  width: 100vw;
   height: 70vh;
-  backdrop-filter: blur(10px);
+  padding-left: 70px;
+  /* backdrop-filter: blur(10px); */
+  margin: 0;
+}
+.event-time-home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .team {
   padding: 5vw;
-  background-color: #111;
+  background-color: white;
 }
 
-.team-hold-multi div {
-  display: flex;
-  overflow-x: auto;
-}
+
+
 .team-hold-multi {
+  
   display: flex;
-  overflow-x: auto;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 #team-txt {
-  color: white;
+  color: black;
 }
 
 #team-txt:hover {
@@ -435,11 +444,17 @@ a {
 }
 
 #faculties-txt {
-  color: white;
+  color: black;
 }
 
 #student-txt {
-  color: white;
+  color: black;
+}
+
+.event-head-wrapper
+{
+  display: flex;
+  justify-content: center;
 }
 
 .event-head {
@@ -452,17 +467,15 @@ a {
   transition: background-color 0.23s ease-in;
 }
 
-.event-head:hover {
-  background-color: #222222;
-}
 
 .equipments {
-  background: linear-gradient(
+  /* background: linear-gradient(
     120deg,
     rgb(35, 88, 173) 30%,
     rgb(55, 200, 195) 60%,
     rgb(35, 88, 173)
-  );
+  ); */
+  background-color: aliceblue;
   margin-bottom: 0px;
   animation: gradientmove 8s infinite linear;
   background-size: 200% auto;
@@ -470,6 +483,8 @@ a {
 
 .equipment-holder {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   overflow-x: auto;
   margin-top: 0vw;
   margin-left: 5vw;
@@ -507,9 +522,9 @@ a {
   transition: background-color 0.23s ease-in;
 }
 
-.equipment-heading:hover {
+/* .equipment-heading:hover {
   background: #222222;
-}
+} */
 
 .grid {
   background-color: #111;
@@ -536,8 +551,8 @@ a {
   align-items: center;
   justify-content: center;
   width: auto;
-  background: #212121;
-  color: white;
+  background: white;
+  color: black;
   gap: 80px;
   padding: 50px;
   animation: gradientmove 16s infinite linear;
@@ -555,11 +570,13 @@ a {
   background-color: #e0e2e6;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0px;
   line-height: 1px;
   border-radius: 10px;
   color: #111;
   padding: 10px 30px;
+  min-width: 220px;
 
 }
 

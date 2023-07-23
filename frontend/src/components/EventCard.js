@@ -9,10 +9,10 @@ function EventCard(props1) {
           <img id="event-thumbnail-image" src={props1.img} />
         </div>
         <div className="date">
-          <p id="event-posted">{props1.date}</p>
+          <p id="event-posted">{props1.title}</p>
         </div>
-        <div className="description">
-          <p id="event-desc">{props1.des}</p>
+        <div className="event-time-home">
+          <p id="event-desc">{props1.date}</p>
         </div>
       </div>
     </div>

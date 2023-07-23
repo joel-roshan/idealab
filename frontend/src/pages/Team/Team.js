@@ -9,7 +9,7 @@ import { apiURL } from "../../configs/urls";
 const Team = () => {
   const [teams, setTeams] = useState([]);
   const [studentTeams, setStudentTeams] = useState([]);
-  useEffect(() => {
+   useEffect(() => {
     fetch(
       `${apiURL}/api/list_teams/`
     )
@@ -19,7 +19,7 @@ const Team = () => {
         const studentTeamsData = data.filter(
           (team) => team.designation === "Student"
         );
-        const teamsData = data.filter((team) => team.designation === "Faculty");
+        const teamsData = data.filter((team) => team.designation === "Faculty in Charge");
 
         setTeams(teamsData);
         // Update the studentTeams state with the filtered data
@@ -56,7 +56,7 @@ const Team = () => {
           <h3 id="team-sub-head">Student in charges</h3>
         </div>
 
-        <div className="team-hold-multi team-hold-multi-inside">
+        <div className="team-hold-multi ">
           <div>
             {studentTeams.map((team) => (
               <ProfileCard key={team.id} name={team.name} img={team.img} />
@@ -64,7 +64,7 @@ const Team = () => {
           </div>
         </div>
       </div>
-      <hr className="carouselrule" />
+      {/* <hr className="carouselrule" /> */}
       <Footer />
     </div>
   );

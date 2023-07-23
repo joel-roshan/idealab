@@ -9,6 +9,7 @@ import { apiURL } from "../../configs/urls";
 
 const Facilities = () => {
   const [facilities, setFacilities] = useState([]);
+  
 
   useEffect(() => {
     getfacilities();
@@ -23,6 +24,9 @@ const Facilities = () => {
       })
       .catch((err) => console.log(err));
   };
+
+  const sortedFacilities = facilities.sort((a, b) => a.name.localeCompare(b.name));
+
   return (
     <div>
       <div id="facilities-body">
@@ -31,16 +35,16 @@ const Facilities = () => {
           <h2 id="event-heading">We have</h2>
         </div>
         <div className="facilities-grid">
-          {facilities.map((event) => (
+          {sortedFacilities.map((event) => (
             <FacilitiesCard
-              img="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSIaEsVq96A9ef5hNyMFNWuK4_SSYVR5DITgz2ry6cUrAvoxnWJwxOdPaJbFWR1rrZ4PzLufC4uhf-9b3w9ng2PEn7c7UnqdtKhTA6o2yfsLRo6HD5SL5nNdt_MIacyotn9drc&usqp=CAc"
               title={event.name}
+              img={event.img}
               des={event.description}
             />
           ))}
         </div>
       </div>
-      <hr className="carouselrule" />
+      {/* <hr className="carouselrule" /> */}
       <Footer />
     </div>
   );

@@ -10,7 +10,7 @@
   border-radius: 5px;
   border-right: black solid 2px;
   border-bottom: black solid 2px;
-  box-shadow: 5px 5px 4px #888888;
+  box-shadow: 1px 1px 3px #888888;
   transform-style: preserve-3d;
   will-change: transform;
 }

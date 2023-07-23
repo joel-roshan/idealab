@@ -180,3 +180,27 @@ form button {
     background-color: #0000c5;
     cursor: pointer;
 }
+/* Styling for the success pop-up */
+.success-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #dff0d8;
+    border: 1px solid #3c763d;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Styling for the error pop-up */
+  .error-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f2dede;
+    border: 1px solid #a94442;
+    padding: 10px;
+    text-align: center;
+  }
+  

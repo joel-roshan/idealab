@@ -16,7 +16,7 @@ const Contact = () => {
           Contact: hodcs@mec.ac.in<br />
           Phone: 0484 2307127</p>
       </div>
-      <hr className="carouselrule" />
+      {/* <hr className="carouselrule" /> */}
       <Footer />
     </div>
   )

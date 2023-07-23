@@ -3,13 +3,15 @@ import logo from "../asset/logo.png";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 import idealablogo from "../asset/idealab.png";
+import { AiFillLinkedin } from 'react-icons/ai'
+import { AiOutlineTwitter } from 'react-icons/ai'
 
 const Footer = () => {
   return (
     <div id="whole-foot">
       <section id="footer">
         <div id="logo">
-          <img src={logo}></img>
+          <a href="https://mec.ac.in" target="_blank"><img id="mec-footer"src={logo}></img></a> 
           <img src={idealablogo}></img>
           <a href="https://cognicor.com" target="_blank">
             <img
@@ -19,6 +21,13 @@ const Footer = () => {
             />
           </a>
         </div>
+        <div className="icons">
+        <a href="https://twitter.com"><AiFillLinkedin size={28} /></a>
+        <a href="https://twitter.com"><AiOutlineTwitter size={28} /></a>
+
+        </div>
+
+
         <div id="row2">
           <h4>Contact Us</h4>
           <p>

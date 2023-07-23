@@ -3,7 +3,7 @@ import './ProfileCard.css'
 
 function ProfileCard(props2) {
         return (
-        <div>
+        
             <div className='profile-Holder' data-tilt data-tilt-scale="1.1" >
                 <div className='profilepic'>
                     <img id="profilepicture" src={props2.img} />
@@ -12,7 +12,7 @@ function ProfileCard(props2) {
                     <p>{props2.name}</p>
                 </div>
             </div>
-        </div>
+        
     )
 }
 
